@@ -1,0 +1,2 @@
+# UnityAPIChineseAnnotation
+这是Unity中的API注释文件，将它替换到原目录中即可显示中文注释。
