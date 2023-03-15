@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<doc>
+	<assembly>
+		<name>UnityEditor.CoreModule.dll</name>
+	</assembly>
+	<members>
+		<MF-UnityEditor.EditorApplication>
+			<member name="T:UnityEditor.EditorApplication">
+				<summary>
+					主应用程序类
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.projectWindowItemOnGUI">
+				<summary>
+					Project 窗口中每个可见列表项的 OnGUI 事件的委托。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.hierarchyWindowItemOnGUI">
+				<summary>
+					Hierarchy 窗口中每个可见列表项的 OnGUI 事件的委托。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.update">
+				<summary>
+					通用更新的委托。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.delayCall">
+				<summary>
+					在所有检视面板更新之后调用一次的委托。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.hierarchyWindowChanged">
+				<summary>
+					当层次结构中的对象发生变化时引发的回调。每当一个对象(或一组对象)被创建、重命名、父化、非父化或销毁时，就会引发这个回调。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.projectWindowChanged">
+				<summary>
+					每当“项目”窗口的状态更改时，都会引发回调。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.searchChanged">
+				<summary>
+					每当窗口的搜索框的内容发生更改时引发的回调。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.modifierKeysChanged">
+				<summary>
+					已更改的键盘修改键的委托。
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.playmodeStateChanged">
+				<summary>
+					播放模式状态被改变时引发的回调
+				</summary>
+			</member>
+			<member name="F:UnityEditor.EditorApplication.contextualPropertyMenu">
+				<summary>
+					每当用户上下文单击 Inspector 中的属性时引发的回调。
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isPaused">
+				<summary>
+					编辑器当前是否暂停?
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isCompiling">
+				<summary>
+					编辑器当前正在编译脚本吗?(只读)
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isUpdating">
+				<summary>
+					编辑器当前是否正在刷新资产库（AssetDatabase）？
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isRemoteConnected">
+				<summary>
+					编辑器当前是否已连接到 Unity Remote 4 客户端应用程序。
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.scriptingRuntimeVersion">
+				<summary>
+					返回编辑器当前使用的脚本运行时版本。
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.applicationContentsPath">
+				<summary>
+					Unity编辑器安装路径下Data的路径。（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.applicationPath">
+				<summary>
+					Unity编辑器应用程序Unity.exe路径（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isTemporaryProject">
+				<summary>
+					如果当前项目是作为临时项目创建的，则返回true。
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.timeSinceStartup">
+				<summary>
+					编辑器启动后的时间。(只读)
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isSceneDirty">
+				<summary>
+					如果编辑器中当前打开的场景包含未保存的修改，则为true。
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.currentScene">
+				<summary>
+					用户当前打开的场景的路径(如果当前没有打开场景，则为空字符串)。(只读)
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode">
+				<summary>
+					编辑器当前是否处于播放模式，或者即将切换到播放模式?(只读)
+				</summary>
+			</member>
+			<member name="P:UnityEditor.EditorApplication.isPlaying">
+				<summary>
+					编辑器当前是否处于播放模式?
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.hierarchyChanged">
+				<summary>
+					当层级视图中的对象或对象组发生更改时引发的事件。
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.wantsToQuit">
+				<summary>
+					当编辑器应用程序想要退出时，Unity 会引发此事件。
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.playModeStateChanged">
+				<summary>
+					每当编辑器的播放模式状态发生更改时引发的事件。
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.pauseStateChanged">
+				<summary>
+					每当编辑器的暂停状态发生更改时引发的事件。
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.projectChanged">
+				<summary>
+					每当项目的状态发生更改时引发的事件。
+				</summary>
+			</member>
+			<member name="E:UnityEditor.EditorApplication.quitting">
+				<summary>
+					当编辑器应用程序退出时，Unity 会引发此事件。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.Beep">
+				<summary>
+					播放系统哔哔声。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.DirtyHierarchyWindowSorting">
+				<summary>
+					将层次排序方法设置为dirty。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.EnterPlaymode">
+				<summary>
+					将编辑器切换到播放模式。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.ExecuteMenuItem(System.String)">
+				<summary>
+					调用指定路径中的菜单项。
+				</summary>
+				<param name="menuItemPath">菜单项路径</param>
+				<returns>调用成功返回True</returns>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.Exit(System.Int32)">
+				<summary>
+					退出Unity编辑器应用程序。
+				</summary>
+				<param name="returnValue">返回值，默认传0就可以</param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.ExitPlaymode">
+				<summary>
+					将编辑器切换到编辑模式。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.LoadLevelAdditiveAsyncInPlayMode(System.String)">
+				<summary>
+					在游戏模式中异步加载给定关卡
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.LoadLevelAdditiveInPlayMode(System.String)">
+				<summary>
+					在游戏模式中加载给定的关卡。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.LoadLevelAsyncInPlayMode(System.String)">
+				<summary>
+					在游戏模式中异步加载给定关卡。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.LoadLevelInPlayMode(System.String)">
+				<summary>
+					在游戏模式中加载给定的关卡。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.LockReloadAssemblies">
+				<summary>
+					防止在不方便时加载程序集。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.MarkSceneDirty">
+				<summary>
+					显式地将当前打开的场景标记为已修改。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.NewEmptyScene">
+				<summary>
+					创建一个新的完全空的场景。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.NewScene">
+				<summary>
+					创建一个新场景。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.OpenProject(System.String,System.String[])">
+				<summary>
+					打开另一个项目。
+				</summary>
+				<param name="projectPath">要打开的项目的路径。</param>
+				<param name="args">要传递给命令行的参数。</param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.OpenScene(System.String)">
+				<summary>
+					打开路径处的场景。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.OpenSceneAdditive(System.String)">
+				<summary>
+					添加模式打开路径处的场景。
+				</summary>
+				<param name="path"></param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.QueuePlayerLoopUpdate">
+				<summary>
+					通常情况下，当场景被修改后，编辑器中将发生播放器循环更新。无论场景是否已被修改，此方法都允许您对播放器循环更新进行排队。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.RepaintAnimationWindow">
+				<summary>
+					可以用来确保重新绘制Animation窗口。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.RepaintHierarchyWindow">
+				<summary>
+					可以用来确保重新绘制Hierarchy窗口。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.RepaintProjectWindow">
+				<summary>
+					可以用来确保重新绘制Project窗口。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SaveAssets">
+				<summary>
+					保存尚未写入磁盘的所有可序列化资产(例如：Materials)。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SaveCurrentSceneIfUserWantsTo">
+				<summary>
+					询问用户是否想要保存打开的场景。
+				</summary>
+				<returns></returns>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SaveScene(System.String,System.Boolean)">
+				<summary>
+					保存当前打开的场景
+				</summary>
+				<param name="path">要保存的文件路径。如果为空，当前打开的场景将被覆盖，或者如果之前从未保存过，则会显示一个保存对话框。</param>
+				<param name="saveAsCopy">如果设置为true，场景将被保存，而不改变当前场景，也不清除未保存的更改标记。</param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SaveScene">
+				<summary>
+					保存当前打开的场景
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SaveScene(System.String)">
+				<summary>
+					保存当前打开的场景
+				</summary>
+				<param name="path">要保存的文件路径。如果为空，当前打开的场景将被覆盖，或者如果之前从未保存过，则会显示一个保存对话框。</param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.SetTemporaryProjectKeepPath(System.String)">
+				<summary>
+					设置 Unity 在关闭当前的临时项目时应在哪个路径存储该项目。
+				</summary>
+				<param name="path">关闭当前临时项目时应将其重新定位到的路径。</param>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.Step">
+				<summary>
+					执行单帧步骤。
+				</summary>
+			</member>
+			<member name="M:UnityEditor.EditorApplication.UnlockReloadAssemblies">
+				<summary>
+					必须在 LockReloadAssemblies 之后调用，以重新启用程序集的加载过程。
+				</summary>
+			</member>
+			<member name="T:UnityEditor.EditorApplication.ProjectWindowItemCallback">
+				<summary>
+					要在每个 OnGUI 事件上为 Project 窗口中的每个可见列表项调用的委托。
+				</summary>
+			</member>
+			<member name="T:UnityEditor.EditorApplication.HierarchyWindowItemCallback">
+				<summary>
+					要在每个 OnGUI 事件上为 Hierarchy 窗口中的每个可见列表项调用的委托。
+				</summary>
+			</member>
+			<member name="T:UnityEditor.EditorApplication.CallbackFunction">
+				<summary>
+					要从 EditorApplication 回调中调用的委托。
+				</summary>
+			</member>
+			<member name="T:UnityEditor.EditorApplication.SerializedPropertyCallbackFunction">
+				<summary>
+					要从 EditorApplication 上下文检视面板回调中调用的委托。
+				</summary>
+				<param name="menu">即将向用户显示的上下文菜单。</param>
+				<param name="property">要为其显示上下文菜单的属性。</param>
+			</member>
+		</MF-UnityEditor.EditorApplication>
+	</members>
+</doc>

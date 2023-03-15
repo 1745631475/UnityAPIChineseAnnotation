@@ -1,0 +1,3177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<doc>
+	<assembly>
+		<name>UnityEngine.CoreModule.dll</name>
+	</assembly>
+	<members>
+		<MF-UnityEngine.Object>
+			<member name="T:UnityEngine.Object">
+				<summary>
+					Unity 可以引用的所有对象的基类。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Object.hideFlags">
+				<summary>
+					该对象应该隐藏、随场景一起保存还是由用户修改？
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Object.name">
+				<summary>
+					对象的名称。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.Destroy(UnityEngine.Object,System.Single)">
+				<summary>
+					在t秒后，销毁 GameObject、组件或资源。
+				</summary>
+				<param name="obj">要销毁的对象</param>
+				<param name="t">延迟销毁时间（单位:秒）</param>
+			</member>
+			<member name="M:UnityEngine.Object.Destroy(UnityEngine.Object)">
+				<summary>
+					销毁 GameObject、组件或资源。
+				</summary>
+				<param name="obj">要销毁的对象</param>
+			</member>
+			<member name="M:UnityEngine.Object.DestroyImmediate(UnityEngine.Object)">
+				<summary>
+					立即销毁 obj 对象。强烈建议您改用 Destroy。该函数应只在编写 Editor 代码时使用。
+				</summary>
+				<param name="obj">要销毁的对象</param>
+			</member>
+			<member name="M:UnityEngine.Object.DestroyImmediate(UnityEngine.Object,System.Boolean)">
+				<summary>
+					立即销毁 obj 对象。强烈建议您改用 Destroy。该函数应只在编写 Editor 代码时使用。
+				</summary>
+				<param name="obj">要销毁的对象</param>
+				<param name="allowDestroyingAssets">设置为 true 将允许销毁资源</param>
+			</member>
+			<member name="M:UnityEngine.Object.DestroyObject(UnityEngine.Object,System.Single)">
+				<summary>
+					已弃用，请改用 Destroy。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.DestroyObject(UnityEngine.Object)">
+				<summary>
+					已弃用，请改用Destroy。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.DontDestroyOnLoad(UnityEngine.Object)">
+				<summary>
+					在加载新的 场景Scene 时，请勿销毁 Object对象。
+				</summary>
+				<param name="target">场景Scene改变时不被销毁的目标对象</param>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectOfType``1">
+				<summary>
+					返回类型为 T 的最后一个已加载的激活对象。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<typeparam name="T">要查找的对象类型</typeparam>
+				<returns>类型为 T 的对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectOfType``1(System.Boolean)">
+				<summary>
+					返回类型为 T 的最后一个已加载的 激活/未激活 对象。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<typeparam name="T">要查找的对象类型</typeparam>
+				<param name="includeInactive">如果为True,则包含未激活对象</param>
+				<returns>类型为 T 的对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectOfType(System.Type)">
+				<summary>
+					返回类型为 type 的最后一个已加载的激活对象。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<param name="type">要查找的对象类型</param>
+				<returns>类型为 type 的对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectOfType(System.Type,System.Boolean)">
+				<summary>
+					返回类型为 type 的最后一个已加载的 激活/未激活 对象。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<param name="type">要查找的对象类型</param>
+				<param name="includeInactive">如果为True,则包含未激活对象</param>
+				<returns>类型为 type 的对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfType``1">
+				<summary>
+					返回所有类型为 T 的已加载的激活对象数组。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<typeparam name="T">要查找的对象类型</typeparam>
+				<returns>类型为 T 的对象数组</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfType(System.Type,System.Boolean)">
+				<summary>
+					返回所有类型为 type 的已加载的 激活/未激活 对象数组。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<param name="type">要查找的对象类型</param>
+				<param name="includeInactive">如果为True,则包含未激活对象</param>
+				<returns>类型为 type 的对象数组</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfType``1(System.Boolean)">
+				<summary>
+					返回所有类型为 T 的已加载的 激活/未激活 对象数组。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<typeparam name="T">要查找的对象类型</typeparam>
+				<param name="includeInactive">如果为True,则包含未激活对象</param>
+				<returns>类型为 T 的对象数组</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfType(System.Type)">
+				<summary>
+					返回所有类型为 type 的已加载的激活对象数组。请注意，这个功能非常慢。不建议每一帧都使用此函数。在大多数情况下，你可以使用单例模式。不会返回任何资源（如网格、纹理、预制件）或设置了 HideFlags.DontSave 的对象。
+				</summary>
+				<param name="type">要查找的对象类型</param>
+				<returns>类型为 type 的对象数组</returns>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfTypeAll(System.Type)">
+				<summary>
+					已弃用，请改用 Resources.FindObjectsOfTypeAll。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.FindObjectsOfTypeIncludingAssets(System.Type)">
+				<summary>
+					已弃用，请改用 Resources.FindObjectsOfTypeAll。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.FindSceneObjectsOfType(System.Type)">
+				<summary>
+					已弃用，请改用 Object.FindObjectsOfType。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate``1(``0,UnityEngine.Transform)">
+				<summary>
+					克隆并实例化类型为 T 的 original 对象，并且可以指定对象的父对象。
+				</summary>
+				<typeparam name="T">要克隆的对象的类型</typeparam>
+				<param name="original">要克隆的对象</param>
+				<param name="parent">指定的父对象</param>
+				<returns>新的 T 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)">
+				<summary>
+					克隆并实例化 Object 类型的 original 对象，并且可以设置对象的 Vector3 坐标信息 和 Quaternion 旋转信息。
+				</summary>
+				<param name="original">要克隆的对象</param>
+				<param name="position">新对象的坐标信息</param>
+				<param name="rotation">新对象的旋转信息</param>
+				<returns>新的 Object 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate``1(``0,UnityEngine.Transform,System.Boolean)">
+				<summary>
+					克隆并实例化类型为 T 的 original 对象，并且可以指定对象的父对象 和 基于父对象还是世界空间的位置。
+				</summary>
+				<typeparam name="T">要克隆的对象的类型</typeparam>
+				<param name="original">要克隆的对象</param>
+				<param name="parent">指定的父对象</param>
+				<param name="worldPositionStays">true 直接在世界空间中定位新对象的位置。false 设置对象相对于它的新父对象的位置</param>
+				<returns>新的 T 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate(UnityEngine.Object)">
+				<summary>
+					克隆并实例化 Object 类型的 original 对象。
+				</summary>
+				<param name="original">要克隆的对象</param>
+				<returns>新的 Object 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Transform)">
+				<summary>
+					克隆并实例化 Object 类型的 original 对象，并且可以设置对象的 Vector3 坐标信息 和 Quaternion 旋转信息 以及 指定对象的父对象。
+				</summary>
+				<param name="original">要克隆的对象</param>
+				<param name="position">新对象的坐标信息</param>
+				<param name="rotation">新对象的旋转信息</param>
+				<param name="parent">指定的父对象</param>
+				<returns>新的 Object 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate(UnityEngine.Object,UnityEngine.Transform,System.Boolean)">
+				<summary>
+					克隆并实例化 Object 类型的 original 对象，并且可以指定对象的父对象 和 基于父对象还是世界空间的位置。
+				</summary>
+				<param name="original">要克隆的对象</param>
+				<param name="parent">指定的父对象</param>
+				<param name="instantiateInWorldSpace">true 直接在世界空间中定位新对象的位置。false 设置对象相对于它的新父对象的位置</param>
+				<returns>新的 Object 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate``1(``0)">
+				<summary>
+					克隆并实例化类型为 T 的 original 对象。
+				</summary>
+				<typeparam name="T">要克隆的对象的类型</typeparam>
+				<param name="original">要克隆的对象</param>
+				<returns>新的 T 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate``1(``0,UnityEngine.Vector3,UnityEngine.Quaternion)">
+				<summary>
+					克隆并实例化类型为 T 的 original 对象，并且可以设置对象的 Vector3 坐标信息 和 Quaternion 旋转信息。
+				</summary>
+				<typeparam name="T">要克隆的对象的类型</typeparam>
+				<param name="original">要克隆的对象</param>
+				<param name="position">新对象的坐标信息</param>
+				<param name="rotation">新对象的旋转信息</param>
+				<returns>新的 T 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate``1(``0,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Transform)">
+				<summary>
+					克隆并实例化类型为 T 的 original 对象，并且可以设置对象的 Vector3 坐标信息 和 Quaternion 旋转信息 以及 指定对象的父对象。
+				</summary>
+				<typeparam name="T">要克隆的对象的类型</typeparam>
+				<param name="original">要克隆的对象</param>
+				<param name="position">新对象的坐标信息</param>
+				<param name="rotation">新对象的旋转信息</param>
+				<param name="parent">指定的父对象</param>
+				<returns>新的 T 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Instantiate(UnityEngine.Object,UnityEngine.Transform)">
+				<summary>
+					克隆并实例化 Object 类型的 original 对象，并且可以指定对象的父对象。
+				</summary>
+				<param name="original">要克隆的对象</param>
+				<param name="parent">指定的父对象</param>
+				<returns>新的 Object 类型的克隆对象</returns>
+			</member>
+			<member name="M:UnityEngine.Object.Equals(System.Object)">
+				<summary>
+					比较两个对象实例是否相等。
+				</summary>
+				<param name="other">要比较的对象</param>
+				<returns>相等返回True,不相等返回False</returns>
+			</member>
+			<member name="M:UnityEngine.Object.GetHashCode">
+				<summary>
+					获取对象的哈希码
+				</summary>
+				<returns>对象的哈希码</returns>
+			</member>
+			<member name="M:UnityEngine.Object.GetInstanceID">
+				<summary>
+					获取对象的 Instance实例 ID
+				</summary>
+				<returns>Instance实例 ID</returns>
+			</member>
+			<member name="M:UnityEngine.Object.ToString">
+				<summary>
+					以字符串形式输出对象，返回对象的名称
+				</summary>
+				<returns>对象名称</returns>
+			</member>
+			<member name="M:UnityEngine.Object.op_Equality(UnityEngine.Object,UnityEngine.Object)">
+				<summary>
+					比较两个对象引用，判断它们是否引用同一个对象。
+				</summary>
+				<param name="x">第一个对象。</param>
+				<param name="y">要与第一个对象进行比较的对象。</param>
+				<returns>相等 True,不相等 False</returns>
+			</member>
+			<member name="M:UnityEngine.Object.op_Inequality(UnityEngine.Object,UnityEngine.Object)">
+				<summary>
+					比较两个对象是否引用不同的对象。
+				</summary>
+				<param name="x">第一个对象。</param>
+				<param name="y">要与第一个对象进行比较的对象。</param>
+				<returns>不同对象 True,相同对象 False</returns>
+			</member>
+			<member name="M:UnityEngine.Object.op_Implicit(UnityEngine.Object)~System.Boolean">
+				<summary>
+					该对象是否存在？
+				</summary>
+				<param name="exists"></param>
+			</member>
+		</MF-UnityEngine.Object>
+		<MF-UnityEngine.Component>
+			<member name="T:UnityEngine.Component">
+				<summary>
+					可附加到 GameObject游戏对象 的基类。通常称为：组件。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.particleSystem">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>ParticleSystem<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.transform">
+				<summary>
+					获取此游戏对象的 Transform 变换信息。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.gameObject">
+				<summary>
+					获取此游戏对象的 GameObject 实体类。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.tag">
+				<summary>
+					此游戏对象的标签Tag。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.rigidbody">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Rigidbody<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.camera">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Camera<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.light">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Light<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.rigidbody2D">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Rigidbody2D<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.constantForce">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>ConstantForce<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.renderer">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Renderer<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.audio">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>AudioSource<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.networkView">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>NetworkView<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.collider">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Collider<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.collider2D">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Collider2D<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.animation">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Animation<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Component.hingeJoint">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>HingeJoint<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Component.BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="parameter">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果此游戏对象和子对象上名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.BroadcastMessage(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果此游戏对象和子对象上名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.BroadcastMessage(System.String)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.Component.BroadcastMessage(System.String,System.Object)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="parameter">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.Component.CompareTag(System.String)">
+				<summary>
+					指定标签与该游戏对象的标签是否相同
+				</summary>
+				<param name="tag">指定的标签</param>
+				<returns>相同 True,不相同 False</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponent(System.Type)">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponent``1">
+				<summary>
+					获取 T 类型附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponent(System.String)">
+				<summary>
+					获取类型名称为 type 附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<param name="type">类型的名称</param>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInChildren(System.Type,System.Boolean)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此游戏对象或任何子对象上类型为 t 的 Component组件。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInChildren(System.Type)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此激活的游戏对象或任何激活子对象上 类型为 t 的 Component组件。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInChildren``1(System.Boolean)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此游戏对象或任何子对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInChildren``1">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此激活的游戏对象或任何激活子对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInParent(System.Type,System.Boolean)">
+				<summary>
+					寻找并获取附加到此游戏对象或任何父对象上类型为 t 的 Component组件。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInParent(System.Type)">
+				<summary>
+					寻找并获取附加到此激活的游戏对象或任何激活父对象上 类型为 t 的 Component组件。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInParent``1">
+				<summary>
+					寻找并获取附加到此激活的游戏对象或任何激活父对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentInParent``1(System.Boolean)">
+				<summary>
+					寻找并获取附加到此游戏对象或任何父对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponents(System.Type)">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象 中类型为 type 的所有 Component组件 数组。</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponents(System.Type,System.Collections.Generic.List{UnityEngine.Component})">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponents``1(System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象 上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponents``1">
+				<summary>
+					获取 T 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象 中类型为 type的所有 Component组件 数组。</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren``1(System.Boolean)">
+				<summary>
+					获取 T 类型附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren(System.Type,System.Boolean)">
+				<summary>
+					获取 t 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren(System.Type)">
+				<summary>
+					获取 t 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren``1(System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其子对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren``1">
+				<summary>
+					获取 T 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInChildren``1(System.Boolean,System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其子对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<param name="result">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInParent``1">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象 或其父对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInParent(System.Type)">
+				<summary>
+					获取 t 类型 附加到此 GameObjecr游戏对象 或其父对象上的所有 Component组件 数组。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInParent``1(System.Boolean,System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInParent``1(System.Boolean)">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.GetComponentsInParent(System.Type,System.Boolean)">
+				<summary>
+					获取 t 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组。
+				</summary>
+				<param name="t">要获取的组件类型</param>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessage(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果该对象上的名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果该对象上的名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessage(System.String)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessage(System.String,System.Object)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessageUpwards(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果此游戏对象和父对象中 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessageUpwards(System.String,System.Object)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessageUpwards(System.String)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.Component.SendMessageUpwards(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果此游戏对象和父对象中 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.Component.TryGetComponent``1(``0@)">
+				<summary>
+					获取 T 类型附加到此 GameObject游戏对象 上的  Component组件（如果存在）。与 GameObject.GetComponent 相比的显著差异在于，如果请求的组件不存在，则此方法不在编辑器中进行分配。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="component">输出获取的组件</param>
+				<returns>组件存在返回True,组件不存在返回False</returns>
+			</member>
+			<member name="M:UnityEngine.Component.TryGetComponent(System.Type,UnityEngine.Component@)">
+				<summary>
+					获取 type 类型附加到此 GameObject游戏对象 上的  Component组件（如果存在）。与 GameObject.GetComponent 相比的显著差异在于，如果请求的组件不存在，则此方法不在编辑器中进行分配。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="component">输出获取的组件</param>
+				<returns>组件存在返回True,组件不存在返回False</returns>
+			</member>
+		</MF-UnityEngine.Component>
+		<MF-UnityEngine.Behaviour>
+			<member name="T:UnityEngine.Behaviour">
+				<summary>
+					可启用或禁用的组件
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Behaviour.enabled">
+				<summary>
+					当前组件是否启用。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Behaviour.isActiveAndEnabled">
+				<summary>
+					当前游戏对象和组件是否启用。
+				</summary>
+			</member>
+		</MF-UnityEngine.Behaviour>
+		<MF-UnityEngine.MonoBehaviour>
+			<member name="T:UnityEngine.MonoBehaviour">
+				<summary>
+					MonoBehaviour 是一个基类，所有 Unity 脚本都派生自该类。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.MonoBehaviour.useGUILayout">
+				<summary>
+					允许 MonoBehaviour 的特定实例在编辑模式下运行（仅可在 Editor 中使用）。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.MonoBehaviour.runInEditMode">
+				<summary>
+					禁用该属性可跳过 GUI 布局阶段。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.print(System.Object)">
+				<summary>
+					将消息记录到 Unity 控制台（与 Debug.Log 相同）。
+				</summary>
+				<param name="message">要记录的消息</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.CancelInvoke(System.String)">
+				<summary>
+					取消该 MonoBehaviour 上所有名为 methodName 的 Invoke 调用。
+				</summary>
+				<param name="methodName">被Invoke调用的方法名</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.CancelInvoke">
+				<summary>
+					取消该 MonoBehaviour 上的所有 Invoke 调用。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.Invoke(System.String,System.Single)">
+				<summary>
+					在 time 秒后调用 methodName 方法。
+				</summary>
+				<param name="methodName">方法名</param>
+				<param name="time">延迟调用时间（单位:秒）</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.InvokeRepeating(System.String,System.Single,System.Single)">
+				<summary>
+					在 time 秒后调用 methodName 方法，然后每 repeatRate 秒调用一次。
+				</summary>
+				<param name="methodName">方法名</param>
+				<param name="time">延迟调用时间（单位:秒）</param>
+				<param name="repeatRate">循环调用时间（单位:秒）</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.IsInvoking(System.String)">
+				<summary>
+					是否有任何待处理的 methodName 调用？
+				</summary>
+				<param name="methodName">方法名</param>
+				<returns>如果有返回True,没有返回False</returns>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.IsInvoking">
+				<summary>
+					该 MonoBehaviour 上是否有任何待处理的调用？
+				</summary>
+				<returns>如果有返回True,没有返回False</returns>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StartCoroutine(System.String)">
+				<summary>
+					启动一个名为 methodName 的协程。
+				</summary>
+				<param name="methodName">协程函数名称</param>
+				<returns>启动的协同程序引用</returns>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StartCoroutine(System.Collections.IEnumerator)">
+				<summary>
+					启动协程。
+				</summary>
+				<param name="routine">要启动的协程</param>
+				<returns>启动的协同程序引用</returns>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StartCoroutine(System.String,System.Object)">
+				<summary>
+					启动一个名为 methodName 的协程。并可传入参数
+				</summary>
+				<param name="methodName">协程函数名称</param>
+				<param name="value">传入的参数（可以是任意值）</param>
+				<returns>启动的协同程序引用</returns>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StartCoroutine_Auto(System.Collections.IEnumerator)">
+				<summary>
+					以弃用，请改用 StartCoroutine
+				</summary>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StopAllCoroutines">
+				<summary>
+					停止在该 MonoBehaviour 上运行的所有协同程序。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StopCoroutine(System.Collections.IEnumerator)">
+				<summary>
+					停止在该 MonoBehaviour 上的协程，传入的参数必须是存储在 IEnumerator 的变量，不能直接传入协程函数。
+				</summary>
+				<param name="routine">协程的引用</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StopCoroutine(UnityEngine.Coroutine)">
+				<summary>
+					停止在该 MonoBehaviour 上的协程，传入的参数必须是存储在 Coroutine 的变量。
+				</summary>
+				<param name="routine">协程的引用</param>
+			</member>
+			<member name="M:UnityEngine.MonoBehaviour.StopCoroutine(System.String)">
+				<summary>
+					停止在该 MonoBehaviour 上运行的第一个名为 methodName 的协程。
+				</summary>
+				<param name="methodName">协程的函数名称</param>
+			</member>
+		</MF-UnityEngine.MonoBehaviour>
+		<MF-UnityEngine.GameObject>
+			<member name="T:UnityEngine.GameObject">
+				<summary>
+					Unity 场景中所有实体的基类。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.#ctor">
+				<summary>
+					创建一个未指定名称的新对象
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.#ctor(System.String)">
+				<summary>
+					创建一个名为 name 的新对象
+				</summary>
+				<param name="name">新对象的名称</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.#ctor(System.String,System.Type[])">
+				<summary>
+					创建一个名为 name 的新对象，并且将 components 列表中的所有类型组件添加到游戏对象上
+				</summary>
+				<param name="name">新对象的名称</param>
+				<param name="components">要添加的组件列表</param>
+			</member>
+			<member name="P:UnityEngine.GameObject.particleSystem">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>ParticleSystem<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.transform">
+				<summary>
+					获取此游戏对象的 Transform 变换信息。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.layer">
+				<summary>
+					此游戏对象的层级。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.active">
+				<summary>
+					已弃用，请改用 GameObject.SetActive() 或 GameObject.activeSelf 或 GameObject.activeInHierarchy.
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.activeSelf">
+				<summary>
+					此 GameObject 的是否激活（忽略父层）（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.activeInHierarchy">
+				<summary>
+					此 GameObject 的是否激活（受父层影响）（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.isStatic">
+				<summary>
+					此 GameObject 是否是静态物体，设置为True将启用所有 StaticEditorFlags
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.tag">
+				<summary>
+					此 GameObject 的标签。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.scene">
+				<summary>
+					该 GameObject 所属的场景。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.sceneCullingMask">
+				<summary>
+					Unity 用于确定在哪个场景中渲染该 GameObject 的场景剔除遮罩。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.gameObject">
+				<summary>
+					获取此游戏对象的 GameObject 实体类。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.rigidbody2D">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Rigidbody2D<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.camera">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Camera<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.light">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Light<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.animation">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Animation<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.constantForce">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>ConstantForce<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.renderer">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Renderer<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.audio">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Audio<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.networkView">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>NetworkView<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.collider">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Collider<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.collider2D">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Collider2D<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.rigidbody">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>Rigidbody<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.GameObject.hingeJoint">
+				<summary>
+					已弃用，请改用 GetComponent<![CDATA[<]]>HingeJoint<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.CreatePrimitive(UnityEngine.PrimitiveType)">
+				<summary>
+					创建一个具有原始网格渲染器和相应碰撞体的游戏对象。
+				</summary>
+				<param name="type">要创建的原始对象的类型。</param>
+				<returns>新的游戏对象</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.Find(System.String)">
+				<summary>
+					查找场景中名为 name 的已激活的游戏对象。出于性能原因，建议不要每帧都使用此函数，而是在启动时将结果缓存到成员变量中，或者使用 GameObject.FindWithTag。
+				</summary>
+				<param name="name">要查找的对象名称</param>
+				<returns>返回查找到的 GameObject，如果没有则返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.FindGameObjectsWithTag(System.String)">
+				<summary>
+					通过标签查找场景中所有已激活的游戏对象。
+				</summary>
+				<param name="tag">标签</param>
+				<returns>查找到的所有游戏对象组成的数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.FindGameObjectWithTag(System.String)">
+				<summary>
+					返回一个标记为 tag 的已激活 GameObject。如果未找到 GameObject，则返回 null。
+				</summary>
+				<param name="tag">标签</param>
+				<returns>查找到的游戏对象</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.FindWithTag(System.String)">
+				<summary>
+					返回一个标记为 tag 的已激活 GameObject。如果未找到 GameObject，则返回 null。
+				</summary>
+				<param name="tag">标签</param>
+				<returns>查找到的游戏对象</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.AddComponent(System.String)">
+				<summary>
+					已弃用，请改用 AddComponent<![CDATA[<]]>T<![CDATA[>]]>()。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.AddComponent(System.Type)">
+				<summary>
+					添加指定类型的组件到该游戏对象上。
+				</summary>
+				<param name="componentType">添加组件的类型</param>
+				<returns>添加的组件</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.AddComponent``1">
+				<summary>
+					添加指定类型的组件到该游戏对象上。
+				</summary>
+				<typeparam name="T">添加组件的类型</typeparam>
+				<returns>添加的组件</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.BroadcastMessage(System.String)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.BroadcastMessage(System.String,System.Object)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="parameter">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="parameter">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果此游戏对象和子对象上名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.BroadcastMessage(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象及其任何子对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果此游戏对象和子对象上名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.CompareTag(System.String)">
+				<summary>
+					指定标签与该游戏对象的标签是否相同
+				</summary>
+				<param name="tag">指定的标签</param>
+				<returns>相同 True,不相同 False</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponent(System.String)">
+				<summary>
+					获取类型名称为 type 附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<param name="type">类型的名称</param>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponent``1">
+				<summary>
+					获取 T 类型附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponent(System.Type)">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>GameObjecr游戏对象 上的 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInChildren(System.Type,System.Boolean)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此游戏对象或任何子对象上类型为 type 的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInChildren``1">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此激活的游戏对象或任何激活子对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInChildren``1(System.Boolean)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此游戏对象或任何子对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInChildren(System.Type)">
+				<summary>
+					使用深度优先算法，寻找并获取附加到此激活的游戏对象或任何激活子对象上 类型为 type 的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInParent(System.Type,System.Boolean)">
+				<summary>
+					寻找并获取附加到此游戏对象或任何父对象上类型为 type 的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInParent(System.Type)">
+				<summary>
+					寻找并获取附加到此激活的游戏对象或任何激活父对象上 类型为 type 的 Component组件。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInParent``1">
+				<summary>
+					寻找并获取附加到此激活的游戏对象或任何激活父对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentInParent``1(System.Boolean)">
+				<summary>
+					寻找并获取附加到此游戏对象或任何父对象上 T 类型的 Component组件。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含未激活对象</param>
+				<returns>找到的第一个 Component组件。如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponents``1(System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象 上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponents(System.Type)">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象 中类型为 type 的所有 Component组件 数组。</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponents``1">
+				<summary>
+					获取 T 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象 中类型为 type的所有 Component组件 数组。</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponents(System.Type,System.Collections.Generic.List{UnityEngine.Component})">
+				<summary>
+					获取 type 类型附加到此 GameObjecr游戏对象 上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren``1(System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其子对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren``1">
+				<summary>
+					获取 T 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren``1(System.Boolean,System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其子对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren``1(System.Boolean)">
+				<summary>
+					获取 T 类型附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren(System.Type,System.Boolean)">
+				<summary>
+					获取 type 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInChildren(System.Type)">
+				<summary>
+					获取 type 类型 附加到此游戏对象或其子对象上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象或其子对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInParent``1">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象 或其父对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInParent``1(System.Boolean,System.Collections.Generic.List{``0})">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 列表，并赋值给 results。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<param name="results">接收返回值的列表</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInParent``1(System.Boolean)">
+				<summary>
+					获取 T 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInParent(System.Type,System.Boolean)">
+				<summary>
+					获取 type 类型 附加到此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="includeInactive">是否包含非激活对象</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.GetComponentsInParent(System.Type)">
+				<summary>
+					获取 type 类型 附加到此 GameObjecr游戏对象 或其父对象上的所有 Component组件 数组。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<returns>此 GameObjecr游戏对象或其父对象上的所有 Component组件 数组</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.PlayAnimation(UnityEngine.Object)">
+				<summary>
+					已弃用，请改用 animation.Play()
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.SampleAnimation(UnityEngine.Object,System.Single)">
+				<summary>
+					已弃用，请改用 AnimationClip.SampleAnimation(GameObject, float)
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessage(System.String)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessage(System.String,System.Object)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果该对象上的名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessage(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象中每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果该对象上的名为 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessageUpwards(System.String)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessageUpwards(System.String,System.Object)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessageUpwards(System.String,System.Object,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="value">要传入该方法的可选参数（可以是任何值）</param>
+				<param name="options">如果此游戏对象和父对象中 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SendMessageUpwards(System.String,UnityEngine.SendMessageOptions)">
+				<summary>
+					调用此游戏对象和所有父游戏对象中的每个 MonoBehaviour 上名为 methodName 的方法。
+				</summary>
+				<param name="methodName">要调用的方法的名称</param>
+				<param name="options">如果此游戏对象和父对象中 methodNam 的方法不存在，是否应报错？</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SetActive(System.Boolean)">
+				<summary>
+					设置游戏对象 激活/失活
+				</summary>
+				<param name="value">true 激活，false 失活</param>
+			</member>
+			<member name="M:UnityEngine.GameObject.SetActiveRecursively(System.Boolean)">
+				<summary>
+					已弃用，请改用 GameObject.SetActive()
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.StopAnimation">
+				<summary>
+					已弃用，请改用 animation.Stop()
+				</summary>
+			</member>
+			<member name="M:UnityEngine.GameObject.TryGetComponent(System.Type,UnityEngine.Component@)">
+				<summary>
+					获取 type 类型附加到此 GameObject游戏对象 上的  Component组件（如果存在）。与 GameObject.GetComponent 相比的显著差异在于，如果请求的组件不存在，则此方法不在编辑器中进行分配。
+				</summary>
+				<param name="type">要获取的组件类型</param>
+				<param name="component">输出获取的组件</param>
+				<returns>组件存在返回True,组件不存在返回False</returns>
+			</member>
+			<member name="M:UnityEngine.GameObject.TryGetComponent``1(``0@)">
+				<summary>
+					获取 T 类型附加到此 GameObject游戏对象 上的  Component组件（如果存在）。与 GameObject.GetComponent 相比的显著差异在于，如果请求的组件不存在，则此方法不在编辑器中进行分配。
+				</summary>
+				<typeparam name="T">要获取的组件类型</typeparam>
+				<param name="component">输出获取的组件</param>
+				<returns>组件存在返回True,组件不存在返回False</returns>
+			</member>
+		</MF-UnityEngine.GameObject>
+		<MF-UnityEngine.Time>
+			<member name="T:UnityEngine.Time">
+				<summary>
+					提供从 Unity 获取时间信息的接口。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.captureDeltaTime">
+				<summary>
+					减慢应用程序的播放时间，以便Unity在帧与帧之间保存截图。设置此值为非零的正值可以使得帧与帧之间的间隔时间保持恒定值。如果您想要捕捉一个需要恒定帧率的电影，并且想要在帧之间留出足够的时间来保存屏幕图像，那么这是很有用的。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.realtimeSinceStartupAsDouble">
+				<summary>
+					游戏开始后的实时时间。realtimeSinceStartup的双精度版本。(真实世界时间)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.realtimeSinceStartup">
+				<summary>
+					游戏开始后的实时时间。(真实世界时间)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.renderedFrameCount">
+				<summary>
+					游戏开始后的总渲染帧数。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.frameCount">
+				<summary>
+					游戏开始后的总帧数。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.timeScale">
+				<summary>
+					时间缩放，这会影响 MonoBehaviour.FixedUpdate() 和协程中带有 WaitForSeconds() 的更新。影响 游戏世界时间。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.maximumParticleDeltaTime">
+				<summary>
+					帧可以在粒子更新上耗用的最长时间。如果帧耗用的时间超过该值，则将更新拆分为多个较小的更新。使用该函数可在粒子模拟的准确性与性能目标之间取得平衡。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.smoothDeltaTime">
+				<summary>
+					经过平滑处理的 Time.deltaTime（只读）。(游戏世界时间)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.maximumDeltaTime">
+				<summary>
+					Time.deltaTime在任何帧中的最大值。这是一个以秒为单位的时间，它限制了两帧之间Time.time的增加。Unity 强制 maximumDeltaTime 始终至少与Time.fixedDeltaTime一样大。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedDeltaTime">
+				<summary>
+					执行物理和其他固定帧率更新（如 MonoBehaviour 的 FixedUpdate）的时间间隔（以秒为单位）。（游戏世界时间，固定的）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedUnscaledDeltaTime">
+				<summary>
+					执行物理和其他固定帧率更新（如 MonoBehaviour 的 FixedUpdate）的真实时间间隔（以秒为单位）。（真实世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.unscaledDeltaTime">
+				<summary>
+					从上一帧到当前帧的真实间隔（以秒为单位。当从MonoBehaviour.FixedUpdate 内部调用它时，它返回Time.fixedUnscaledDeltaTime。（真实世界世界）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedUnscaledTimeAsDouble">
+				<summary>
+					上次FixedUpdate启动后的真实时间的双精度版本(只读)。这是程序开始后的秒数。（真实世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedUnscaledTime">
+				<summary>
+					上次FixedUpdate启动后的真实时间(只读)。这是程序开始后的秒数。（真实世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.unscaledTimeAsDouble">
+				<summary>
+					游戏开始后的总时间的双精度版本，包括启动时间，意味着第一帧不是从0开始。当从MonoBehaviour.FixedUpdate内部调用时，它返回Time.fixedUnscaledTimeAsDouble。(真实世界时间)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.unscaledTime">
+				<summary>
+					游戏开始后的总时间，包括启动时间，意味着第一帧不是从0开始。当从MonoBehaviour.FixedUpdate内部调用时，它返回Time.fixedUnscaledTime。(真实世界时间)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedTimeAsDouble">
+				<summary>
+					上次FixedUpdate启动后的双精度时间(只读)。这是程序开始后的秒数。（游戏世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.fixedTime">
+				<summary>
+					上次FixedUpdate启动后的时间(只读)。这是程序开始后的秒数。（游戏世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.deltaTime">
+				<summary>
+					从上一帧到当前帧的间隔（以秒为单位）（只读）。当从MonoBehaviour.FixedUpdate 内部调用它时，它返回Time.fixedDeltaTime。MonoBehaviour.OnGUI中的deltaTime不可靠，因为 Unity 可能每帧多次调用它。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.timeSinceLevelLoadAsDouble">
+				<summary>
+					最后一个场景加载以来的总时间的双精度版本（以秒为单位）（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.timeSinceLevelLoad">
+				<summary>
+					最后一个场景加载以来的总时间（以秒为单位）（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.timeAsDouble">
+				<summary>
+					游戏开始后的总时间的双精度版本，第一帧从0开始。当从MonoBehaviour.FixedUpdate内部调用时，它返回Time.fixedTime。（游戏世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.time">
+				<summary>
+					游戏开始后的总时间，第一帧从0开始。当从MonoBehaviour.FixedUpdate内部调用时，它返回Time.fixedTime。（游戏世界时间）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.captureFramerate">
+				<summary>
+					Time.captureDeltaTime 的倒数。captureFramerate 等效于将 (1.0 / Time.captureDeltaTime) 四舍五入到最接近的整数。设置 captureFramerate 还会将 Time.captureDeltaTime 设置为等效的倒数。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Time.inFixedTimeStep">
+				<summary>
+					如果在固定时间步长回调（如 MonoBehaviour 的 FixedUpdate）内调用，则返回 true，否则返回 false。
+				</summary>
+			</member>
+		</MF-UnityEngine.Time>
+		<MF-UnityEngine.Vector3>
+			<member name="T:UnityEngine.Vector3">
+				<summary>
+					用于表示 3D 向量和点。Unity 内部使用该结构传递 3D 位置和方向。 此外，它还包含用于执行常见向量操作的函数。
+				</summary>
+			</member>
+			<member name="F:UnityEngine.Vector3.x">
+				<summary>
+					向量的x分量
+				</summary>
+			</member>
+			<member name="F:UnityEngine.Vector3.y">
+				<summary>
+					向量的y分量
+				</summary>
+			</member>
+			<member name="F:UnityEngine.Vector3.z">
+				<summary>
+					向量的z分量
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Vector3.#ctor(System.Single,System.Single)">
+				<summary>
+					使用指定的x,y分量创建新向量，使其z分量为0。
+				</summary>
+				<param name="x">x分量</param>
+				<param name="y">y分量</param>
+			</member>
+			<member name="M:UnityEngine.Vector3.#ctor(System.Single,System.Single,System.Single)">
+				<summary>
+					使用指定的x,y,z分量创建新向量。
+				</summary>
+				<param name="x">x分量</param>
+				<param name="y">y分量</param>
+				<param name="z">z分量</param>
+			</member>
+			<member name="P:UnityEngine.Vector3.Item(System.Int32)">
+				<summary>
+					分别使用 [0]、[1]、[2] 访问 x、y、z 分量。
+				</summary>
+				<param name="index">0 = x,1 = y,2 = z</param>
+				<returns>访问的x、y、z 分量</returns>
+			</member>
+			<member name="P:UnityEngine.Vector3.right">
+				<summary>
+					返回 Vector3(1, 0, 0)。右
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.left">
+				<summary>
+					返回 Vector3(-1, 0, 0)。左
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.up">
+				<summary>
+					返回 Vector3(0, 1, 0)。上
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.back">
+				<summary>
+					返回 Vector3(0, 0, -1)。后
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.forward">
+				<summary>
+					返回 Vector3(0, 0, 1)。前
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.one">
+				<summary>
+					返回 Vector3(1, 1, 1)。归一
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.zero">
+				<summary>
+					返回 Vector3(0, 0, 0)。归零
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.negativeInfinity">
+				<summary>
+					返回 Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity)。负无穷大
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.positiveInfinity">
+				<summary>
+					返回 Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity)。正无穷大
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.down">
+				<summary>
+					返回 Vector3(0, -1, 0)。下
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.fwd">
+				<summary>
+					已弃用，请改用 Vector3.forward
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.normalized">
+				<summary>
+					标准化向量，返回长度为 1 的该向量。如果向量太小而无法标准化，则返回零向量。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.magnitude">
+				<summary>
+					返回该向量的长度。如果只需要比较向量的大小，可以使用 sqrMagnitude 这比 magnitude 计算更快且结果是一样的 (向量长度计算公式：(x*x+y*y+z*z)的平方根)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Vector3.sqrMagnitude">
+				<summary>
+					返回该向量长度的平方。（只读）
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Vector3.Angle(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					返回两个向量之间的角度。返回的角度总是在 0 到 180 度之间，因为该方法返回向量之间的最小角度。也就是说，它永远不会返回反射角。（单位：度）
+				</summary>
+				<param name="from">测量角度差的源向量。</param>
+				<param name="to">测量角度差的目标向量。</param>
+				<returns>两个向量之间的角度（单位：度）</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.AngleBetween(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					已弃用，请改用 Vector3.Angle
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Vector3.ClampMagnitude(UnityEngine.Vector3,System.Single)">
+				<summary>
+					返回被限制最大向量长度的 vector 向量的副本
+				</summary>
+				<param name="vector">要限制长度的向量</param>
+				<param name="maxLength">被限制的最大向量长度</param>
+				<returns>被限制最大向量长度的 vector 向量的副本</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Cross(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					两个向量的叉积。。两个向量的叉积生成第三个向量， 该向量垂直于两个输入向量。结果的大小等于： 将两个输入的大小相乘，然后乘以输入之间角度的正弦值。 可以使用“左手规则”确定结果向量的方向。
+				</summary>
+				<param name="lhs">要叉乘的第一个向量</param>
+				<param name="rhs">要叉乘的第二个向量</param>
+				<returns>两个向量叉积后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Distance(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					返回 a 与 b 之间的距离。
+				</summary>
+				<param name="a">a点</param>
+				<param name="b">b点</param>
+				<returns>两点之间的距离</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Dot(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					两个向量的点积。点积是一个浮点值，它等于 将两个向量的大小相乘，然后乘以向量之间角度的余弦值。对于 normalized 向量，如果它们指向完全相同的方向，Dot 返回 1； 如果它们指向完全相反的方向，返回 -1；如果向量彼此垂直，则 Dot 返回 0。
+				</summary>
+				<param name="lhs">要点积的第一个向量</param>
+				<param name="rhs">要点积的第二个向量</param>
+				<returns>两个向量点积后的结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Exclude(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					已弃用，请改用 Vector3.ProjectOnPlane
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Vector3.Lerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					在两个点之间进行线性插值。使用插值 t 在点 a 和 b 之间进行插值。参数 t 限制在范围 [0, 1] 内。这最常用于查找占两个终端之间距离特定百分比的点（例如，以便在这些点之间逐步移动对象）。
+				</summary>
+				<param name="a">起始值，当 t = 0 时返回。</param>
+				<param name="b">结束值，当 t = 1 时返回。</param>
+				<param name="t">用于在 a 和 b 之间进行插值的值。</param>
+				<returns>Vector3 插值，等于 a + (b - a) * t。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.LerpUnclamped(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					在两个向量之间进行线性插值。使用插值 t 在向量 a 和 b 之间进行插值。这最常用于查找占两个端点之间距离特定百分比的点（例如，以便在这些点之间逐步移动对象）。
+				</summary>
+				<param name="a">起始值，当 t = 0 时返回。</param>
+				<param name="b">结束值，当 t = 1 时返回。</param>
+				<param name="t">用于在 a 和 b 之间进行插值的值。与Lerp的区别在于此t值不受限制</param>
+				<returns>Vector3 插值，等于 a + (b - a) * t。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Magnitude(UnityEngine.Vector3)">
+				<summary>
+					返回指定向量的长度。
+				</summary>
+				<param name="vector">指定获取长度的向量</param>
+				<returns>向量的长度</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Max(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					返回由两个向量的最大分量组成的向量。
+				</summary>
+				<param name="lhs">第一个向量</param>
+				<param name="rhs">第二个向量</param>
+				<returns>两个向量中xyz分量最大值所组成的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Min(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					返回由两个向量的最小分量组成的向量。
+				</summary>
+				<param name="lhs">第一个向量</param>
+				<param name="rhs">第二个向量</param>
+				<returns>两个向量中xyz分量最小值所组成的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.MoveTowards(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					返回指定位置向目标位置移动指定距离的新Vector3。移动距离不超过 maxDistanceDelta 指定的距离。
+				</summary>
+				<param name="current">移动的开始位置。</param>
+				<param name="target">移动的目标位置。</param>
+				<param name="maxDistanceDelta">每次调用移动 current 的距离。</param>
+				<returns>current向target移动指定距离后的新Vector3</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Normalize(UnityEngine.Vector3)">
+				<summary>
+					返回指定向量长度为1的副本。如果指定向量太小而无法标准化，则返回零。
+				</summary>
+				<param name="value">要计算的向量</param>
+				<returns>指定向量长度为1的副本</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.OrthoNormalize(UnityEngine.Vector3@,UnityEngine.Vector3@,UnityEngine.Vector3@)">
+				<summary>
+					将向量标准化，并使他们彼此正交。标准化 normal。 标准化 tangent 并确保其与 normal 正交。 标准化 binormal 并确保其与 normal 和 tangent 正交。
+				</summary>
+				<param name="normal">要标准的向量</param>
+				<param name="tangent">要标准的向量</param>
+				<param name="binormal">要标准的向量</param>
+			</member>
+			<member name="M:UnityEngine.Vector3.OrthoNormalize(UnityEngine.Vector3@,UnityEngine.Vector3@)">
+				<summary>
+					将向量标准化，并使他们彼此正交。标准化 normal。 标准化 tangent 并确保其与 normal 正交（即它们之间的角度为 90 度）。
+				</summary>
+				<param name="normal">要标准的向量</param>
+				<param name="tangent">要标准的向量</param>
+			</member>
+			<member name="M:UnityEngine.Vector3.Project(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					将向量投影到另一个向量上。
+				</summary>
+				<param name="vector">投影的向量</param>
+				<param name="onNormal">被投影的向量</param>
+				<returns>vector向量在onNormal上的投影向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.ProjectOnPlane(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					将向量投影到由法线定义的平面上（法线与该平面正交）。
+				</summary>
+				<param name="vector">投影的向量</param>
+				<param name="planeNormal">平面的法线向量（法线向量垂直于平面）</param>
+				<returns>vector向量在planeNormal法线平面上的投影向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Reflect(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					从法线定义的平面反射一个向量。inNormal 向量定义一个平面 （平面的法线是垂直于其表面的向量）。inDirection 向量被视为进入该平面的定向箭头。 返回值是与 inDirection 大小相等、方向为其反射方向的向量。
+				</summary>
+				<param name="inDirection">平面的法线向量</param>
+				<param name="inNormal">被反射的输入向量</param>
+				<returns>反射后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.RotateTowards(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)">
+				<summary>
+					将指定向量朝目标向量旋转。该函数类似于 MoveTowards，但向量被视为方向而不是位置。 current 向量将朝 target 方向旋转 maxRadiansDelta 的角度， 但其将准确地落在目标上而不会超过目标。 如果 current 和 target 的大小不同，则在旋转期间对结果大小进行线性插值。 如果为 maxRadiansDelta 使用负值，则向量将朝远离 target 的方向旋转， 直到它指向完全相反的方向，然后停止。
+				</summary>
+				<param name="current">要处理的向量。</param>
+				<param name="target">目标向量。</param>
+				<param name="maxRadiansDelta">此旋转允许的最大角度（以弧度为单位）。</param>
+				<param name="maxMagnitudeDelta">此旋转允许的最大矢量幅度变化。</param>
+				<returns>RotateTowards 生成的位置。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Scale(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					将两个向量的分量相乘。结果中的每个分量都是 a 的一个分量乘以 b 的相同分量。
+				</summary>
+				<param name="a">相乘的a向量</param>
+				<param name="b">相乘的b向量</param>
+				<returns>两个向量的分量相乘的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SignedAngle(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					计算向量与轴之间带符号的夹角。返回的角度总是在-180到180度之间，因为该方法会返回向量之间的最小角度。也就是说，它永远不会返回一个反射角度。
+				</summary>
+				<param name="from">测量角度差的源向量。</param>
+				<param name="to">测量角度差的目标向量。</param>
+				<param name="axis">一个轴向量，其他向量将绕其旋转。</param>
+				<returns>返回from和to之间带符号的角度，以度数表示。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Slerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					在两个向量之间进行球形插值。在 a 和 b 之间按大小 t 进行插值。 球形插值与线性插值（也称为“lerp”）的区别在于， 向量被视为方向而不是空间中的点。返回的向量的方向通过角度进行插值， 其 magnitude 在 from 和 to 的大小之间进行插值。
+				</summary>
+				<param name="a">起始值，当 t = 0 时返回。</param>
+				<param name="b">结束值，当 t = 1 时返回。</param>
+				<param name="t">用于在 a 和 b 之间进行插值的值。参数 t 限制在范围 [0, 1] 内。</param>
+				<returns>球形插值后的 Vector3 结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SlerpUnclamped(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					在两个向量之间进行球形插值。在 a 和 b 之间按大小 t 进行插值。 球形插值与线性插值（也称为“lerp”）的区别在于， 向量被视为方向而不是空间中的点。返回的向量的方向通过角度进行插值， 其 magnitude 在 from 和 to 的大小之间进行插值。
+				</summary>
+				<param name="a">起始值，当 t = 0 时返回。</param>
+				<param name="b">结束值，当 t = 1 时返回。</param>
+				<param name="t">用于在 a 和 b 之间进行插值的值。此静态方法可以在 a 和 b 矢量之外进行球形插值。这意味着 t 可以小于 0 或大于 1。</param>
+				<returns>球形插值后的 Vector3 结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3@,System.Single)">
+				<summary>
+					随时间推移将一个向量逐渐改变为所需目标。向量通过某个类似于弹簧-阻尼的函数（它从不超过目标）进行平滑。 最常见的用法是用于平滑跟随摄像机。
+				</summary>
+				<param name="current">当前位置。</param>
+				<param name="target">尝试到达的目标位置</param>
+				<param name="currentVelocity">当前速度，此值由函数在每次调用时进行修改。</param>
+				<param name="smoothTime">到达目标所需的近似时间。值越小，到达目标的速度越快。</param>
+				<returns>平滑阻尼后的Vector3结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3@,System.Single,System.Single)">
+				<summary>
+					随时间推移将一个向量逐渐改变为所需目标。向量通过某个类似于弹簧-阻尼的函数（它从不超过目标）进行平滑。 最常见的用法是用于平滑跟随摄像机。
+				</summary>
+				<param name="current">当前位置。</param>
+				<param name="target">尝试到达的目标位置</param>
+				<param name="currentVelocity">当前速度，此值由函数在每次调用时进行修改。</param>
+				<param name="smoothTime">到达目标所需的近似时间。值越小，到达目标的速度越快。</param>
+				<param name="maxSpeed">可以选择允许限制最大速度。</param>
+				<returns>平滑阻尼后的Vector3结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3@,System.Single,System.Single,System.Single)">
+				<summary>
+					随时间推移将一个向量逐渐改变为所需目标。向量通过某个类似于弹簧-阻尼的函数（它从不超过目标）进行平滑。 最常见的用法是用于平滑跟随摄像机。
+				</summary>
+				<param name="current">当前位置。</param>
+				<param name="target">尝试到达的目标位置</param>
+				<param name="currentVelocity">当前速度，此值由函数在每次调用时进行修改。</param>
+				<param name="smoothTime">到达目标所需的近似时间。值越小，到达目标的速度越快。</param>
+				<param name="maxSpeed">可以选择允许限制最大速度。</param>
+				<param name="deltaTime">自上次调用此函数以来的时间。默认情况下为 Time.deltaTime。</param>
+				<returns>平滑阻尼后的Vector3结果</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.SqrMagnitude(UnityEngine.Vector3)">
+				<summary>
+					返回指定向量长度的平方。
+				</summary>
+				<param name="vector">要计算的向量</param>
+				<returns>向量长度的平方。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Equals(System.Object)">
+				<summary>
+					如果给定对象与该对象完全相等，则返回 true。由于浮点数不准确，对于本质上相等（但不完全相等）的向量，这可能会返回 false。请使用 == operator 测试两个向量的近似相等性。
+				</summary>
+				<param name="other">要对比的对象</param>
+				<returns>相等 True,不相等 False</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Equals(UnityEngine.Vector3)">
+				<summary>
+					如果给定向量与该向量完全相等，则返回 true。由于浮点数不准确，对于本质上相等（但不完全相等）的向量，这可能会返回 false。请使用 == operator 测试两个向量的近似相等性。
+				</summary>
+				<param name="other">要对比的向量</param>
+				<returns>相等 True,不相等 False</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.GetHashCode">
+				<summary>
+					获取对象的哈希码
+				</summary>
+				<returns>对象的哈希码。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.Normalize">
+				<summary>
+					标准化向量，使其长度为1。此函数将更改当前向量。如果 要保持当前向量不变，请使用 normalized 变量。如果该向量太小而无法标准化，则将其设置为零。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Vector3.Scale(UnityEngine.Vector3)">
+				<summary>
+					将该向量的每个分量乘以 scale 的相同分量。
+				</summary>
+				<param name="scale">要相乘的向量</param>
+			</member>
+			<member name="M:UnityEngine.Vector3.Set(System.Single,System.Single,System.Single)">
+				<summary>
+					设置现有 Vector3 的 x、y 和 z 分量。
+				</summary>
+				<param name="newX">x分量设置的值</param>
+				<param name="newY">y分量设置的值</param>
+				<param name="newZ">z分量设置的值</param>
+			</member>
+			<member name="M:UnityEngine.Vector3.ToString(System.String)">
+				<summary>
+					返回此向量的格式化字符串。默认显示两位数字(格式为“F2”)。有关更多信息，请参阅Microsoft关于标准数字格式字符串的文档。
+				</summary>
+				<param name="format">一个数字格式字符串。</param>
+				<returns>格式化后的字符串。</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.ToString">
+				<summary>
+					返回此向量的格式化字符串。默认显示两位数字(格式为“F2”)。有关更多信息，请参阅Microsoft关于标准数字格式字符串的文档。
+				</summary>
+				<returns>格式化后的字符串</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.ToString(System.String,System.IFormatProvider)">
+				<summary>
+					返回此向量的格式化字符串。默认显示两位数字(格式为“F2”)。有关更多信息，请参阅Microsoft关于标准数字格式字符串的文档。
+				</summary>
+				<param name="format">一个数字格式字符串。</param>
+				<param name="formatProvider">指定区域性特定格式的对象。</param>
+				<returns>格式化后的字符串</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Addition(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					向量相加
+				</summary>
+				<param name="a">向量a</param>
+				<param name="b">向量b</param>
+				<returns>向量相加后的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_UnaryNegation(UnityEngine.Vector3)">
+				<summary>
+					向量取反
+				</summary>
+				<param name="a">要取反的向量</param>
+				<returns>向量取反的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					向量相减
+				</summary>
+				<param name="a">向量a</param>
+				<param name="b">向量b</param>
+				<returns>向量相减的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Multiply(System.Single,UnityEngine.Vector3)">
+				<summary>
+					标量乘向量
+				</summary>
+				<param name="d">标量d</param>
+				<param name="a">向量a</param>
+				<returns>标量乘向量的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Multiply(UnityEngine.Vector3,System.Single)">
+				<summary>
+					向量乘标量
+				</summary>
+				<param name="a">向量a</param>
+				<param name="d">标量d</param>
+				<returns>向量乘标量的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Division(UnityEngine.Vector3,System.Single)">
+				<summary>
+					向量除标量
+				</summary>
+				<param name="a">向量a</param>
+				<param name="d">标量d</param>
+				<returns>向量除标量的新向量</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Equality(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					判断两个向量是否相等
+				</summary>
+				<param name="lhs">要判断的第一个向量</param>
+				<param name="rhs">要判断的第二个向量</param>
+				<returns>相等True,不相等False</returns>
+			</member>
+			<member name="M:UnityEngine.Vector3.op_Inequality(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					判断两个向量是否不相等
+				</summary>
+				<param name="lhs">要判断的第一个向量</param>
+				<param name="rhs">要判断的第二个向量</param>
+				<returns>不相等True,相等False</returns>
+			</member>
+		</MF-UnityEngine.Vector3>
+		<MF-UnityEngine.Random>
+			<member name="T:UnityEngine.Random">
+				<summary>
+					轻松生成游戏随机数据。这个静态类提供了几种面向游戏的生成伪随机数的简单方法。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.rotationUniform">
+				<summary>
+					返回具有一致分布的随机旋转（只读）。利用Hopf纤维化在均匀分布的选择空间内返回一个随机四元数。与 rotation 采用的更简单的方法相比，提供更高质量的结果，虽然要付出40%的性能代价。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.rotation">
+				<summary>
+					返回随机旋转（只读）。通过Range将四元数的x, y, z和w随机化为-1.0 到 1.0 (包括-1.0 和 1.0)并规范化结果。请参阅rotationUniform，以获得速度较慢但质量较高的算法。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.onUnitSphere">
+				<summary>
+					返回一个半径为1.0的球面上的随机点(只读)。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.insideUnitCircle">
+				<summary>
+					返回半径为1.0的圆内或圆上的一个随机点(只读)。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.seed">
+				<summary>
+					已弃用，请改用 InitState()
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.state">
+				<summary>
+					获取或设置随机数生成器的完整内部状态。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.value">
+				<summary>
+					返回 0.0 和 1.0 之间的随机浮点数。（包括 0.0 和 1.0）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Random.insideUnitSphere">
+				<summary>
+					返回半径为1.0的球体内部或球体上的一个随机点(只读)。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Random.ColorHSV(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+				<summary>
+					通过 HSV 和 Alpha 范围生成随机颜色。
+				</summary>
+				<param name="hueMin">最小色调 [0..1]。</param>
+				<param name="hueMax">最大色调 [0..1]。</param>
+				<param name="saturationMin">最小饱和度 [0..1]。</param>
+				<param name="saturationMax">最大饱和度 [0..1]。</param>
+				<param name="valueMin">最小值 [0..1]。</param>
+				<param name="valueMax">最大值 [0..1]。</param>
+				<param name="alphaMin">最小 Alpha [0..1]。</param>
+				<param name="alphaMax">最大 Alpha [0..1]。</param>
+				<returns>随机生成的颜色值</returns>
+			</member>
+			<member name="M:UnityEngine.Random.ColorHSV">
+				<summary>
+					通过 HSV 和 Alpha 范围生成随机颜色。
+				</summary>
+				<returns>随机生成的颜色值</returns>
+			</member>
+			<member name="M:UnityEngine.Random.ColorHSV(System.Single,System.Single)">
+				<summary>
+					通过 HSV 和 Alpha 范围生成随机颜色。
+				</summary>
+				<param name="hueMin">最小色调 [0..1]。</param>
+				<param name="hueMax">最大色调 [0..1]。</param>
+				<returns>随机生成的颜色值</returns>
+			</member>
+			<member name="M:UnityEngine.Random.ColorHSV(System.Single,System.Single,System.Single,System.Single)">
+				<summary>
+					通过 HSV 和 Alpha 范围生成随机颜色。
+				</summary>
+				<param name="hueMin">最小色调 [0..1]。</param>
+				<param name="hueMax">最大色调 [0..1]。</param>
+				<param name="saturationMin">最小饱和度 [0..1]。</param>
+				<param name="saturationMax">最大饱和度 [0..1]。</param>
+				<returns>随机生成的颜色值</returns>
+			</member>
+			<member name="M:UnityEngine.Random.ColorHSV(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+				<summary>
+					通过 HSV 和 Alpha 范围生成随机颜色。
+				</summary>
+				<param name="hueMin">最小色调 [0..1]。</param>
+				<param name="hueMax">最大色调 [0..1]。</param>
+				<param name="saturationMin">最小饱和度 [0..1]。</param>
+				<param name="saturationMax">最大饱和度 [0..1]。</param>
+				<param name="valueMin">最小值 [0..1]。</param>
+				<param name="valueMax">最大值 [0..1]。</param>
+				<returns>随机生成的颜色值</returns>
+			</member>
+			<member name="M:UnityEngine.Random.InitState(System.Int32)">
+				<summary>
+					使用种子初始化随机数生成器状态。
+				</summary>
+				<param name="seed">用于初始化随机数生成器的种子。</param>
+			</member>
+			<member name="M:UnityEngine.Random.RandomRange(System.Single,System.Single)">
+				<summary>
+					已弃用，请改用 Random.Range
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Random.RandomRange(System.Int32,System.Int32)">
+				<summary>
+					已弃用，请改用 Random.Range
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Random.Range(System.Int32,System.Int32)">
+				<summary>
+					返回 minInclusive 和 maxExclusive 之间的随机整数，（包含 minInclusive 不包含 maxExclusive）
+				</summary>
+				<param name="minInclusive">随机数的最小值</param>
+				<param name="maxExclusive">随机数的最大值</param>
+				<returns>minInclusive 和 maxExclusive 之间的随机整数，</returns>
+			</member>
+			<member name="M:UnityEngine.Random.Range(System.Single,System.Single)">
+				<summary>
+					返回 minInclusive 和 maxExclusive 之间的随机浮点数，（包含 minInclusive 和 maxExclusive）
+				</summary>
+				<param name="minInclusive">随机数的最小值</param>
+				<param name="maxInclusive">随机数的最大值</param>
+				<returns>minInclusive 和 maxExclusive 之间的随机浮点数，</returns>
+			</member>
+			<member name="T:UnityEngine.Random.State">
+				<summary>
+					用于保存随机数生成器完整内部状态的可序列化结构。
+				</summary>
+			</member>
+		</MF-UnityEngine.Random>
+		<MF-UnityEngine.Transform>
+			<member name="T:UnityEngine.Transform">
+				<summary>
+					对象的位置、旋转和缩放。(Transform可以称为：变换)
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.localPosition">
+				<summary>
+					相对于父变换的变换位置。如果变换没有父级，则其与 Transform.position 相同。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.eulerAngles">
+				<summary>
+					以欧拉角表示的旋转（以度为单位）。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.localEulerAngles">
+				<summary>
+					以欧拉角表示的相对于父变换旋转的旋转（以度为单位）。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.right">
+				<summary>
+					世界空间中此变换的红轴（标准化向量，长度为1），操作游戏对象在世界空间中变换的 X 轴（红轴）上的位置。与 Vector3.right 不同，Transform.right 在移动游戏对象的同时，还考虑其旋转。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.up">
+				<summary>
+					世界空间中此变换的绿轴（标准化向量，长度为1）。操作游戏对象在世界空间中变换的 Y 轴（绿轴）上的位置。与 Vector3.up 不同，Transform.up 在移动游戏对象的同时，还考虑其旋转。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.forward">
+				<summary>
+					世界空间中此变换的蓝轴（标准化向量，长度为1）。操作游戏对象在世界空间中变换的 Z 轴（绿轴）上的位置。与 Vector3.forward 不同，Transform.forward 在移动游戏对象的同时，还考虑其旋转。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.rotation">
+				<summary>
+					以四元数表示的变换在世界空间中的旋转。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.position">
+				<summary>
+					世界空间中的变换位置。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.localRotation">
+				<summary>
+					以四元数表示的相对于父级变换的旋转。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.parent">
+				<summary>
+					变换的父级。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.worldToLocalMatrix">
+				<summary>
+					将点从世界空间转换到本地空间的矩阵（只读）。如果您不熟悉使用矩阵进行坐标变换，请改用 Transform.InverseTransformPoint。若要设置着色器参数，则必须改用 Renderer.worldToLocalMatrix。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.localToWorldMatrix">
+				<summary>
+					将点从本地空间转换到世界空间的矩阵（只读）。如果您不熟悉使用矩阵进行坐标变换，请改用 Transform.TransformPoint。若要设置着色器参数，则必须改用 Renderer.localToWorldMatrix。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.root">
+				<summary>
+					返回层级视图中最顶层的变换。（永远不返回 null；如果该变换没有父级，则返回自身。）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.childCount">
+				<summary>
+					父变换具有的子项数。（父级不包括在计数中。）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.lossyScale">
+				<summary>
+					对象的全局缩放。（只读）
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.hasChanged">
+				<summary>
+					自上次将标志设置为“false”以来，变换是否发生更改？
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.localScale">
+				<summary>
+					相对于 GameObjects 父对象的变换缩放。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.hierarchyCapacity">
+				<summary>
+					变换的层级视图数据结构的变换容量。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Transform.hierarchyCount">
+				<summary>
+					变换的层级视图数据结构中变换的数量。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.DetachChildren">
+				<summary>
+					清除所有子项的父级。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.Find(System.String)">
+				<summary>
+					查找指定名称的子项并返回，通过 "/" 它将像路径名一样访问层次结构中的Transform。可以查找到被禁用的Transform。
+				</summary>
+				<param name="n">要查找子项的名称</param>
+				<returns>返回查找到的Transform，如果没有找到返回 Null</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.FindChild(System.String)">
+				<summary>
+					已弃用，请改用 Find
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.GetChild(System.Int32)">
+				<summary>
+					按索引返回变换子项。
+				</summary>
+				<param name="index">要返回的子变换的索引。必须小于 Transform.childCount。</param>
+				<returns>索引位置处的变换子项。</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.GetChildCount">
+				<summary>
+					已弃用，请改用 Transform.childCount
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.GetEnumerator">
+				<summary>
+					返回遍历集合的枚举器，实现此方法可以使用foreach迭代集合。
+				</summary>
+				<returns>一个System.Collections.IEnumerator对象，可用于遍历集合。</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.GetSiblingIndex">
+				<summary>
+					获取同级索引。
+				</summary>
+				<returns>索引值</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformDirection(UnityEngine.Vector3)">
+				<summary>
+					将向量从世界空间变换到本地空间。与 Transform.TransformDirection 相反。(不受缩放和位置影响)
+				</summary>
+				<param name="direction">要变换的向量</param>
+				<returns>变换到本地空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformDirection(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的向量从世界空间变换到本地空间。与 Transform.TransformDirection 相反。(不受缩放和位置影响)
+				</summary>
+				<param name="x">向量的x分量</param>
+				<param name="y">向量的y分量</param>
+				<param name="z">向量的z分量</param>
+				<returns>变换到本地空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformPoint(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的位置从世界空间变换到本地空间。与 Transform.TransformPoint 相反。(受缩放影响)
+				</summary>
+				<param name="x">位置的x分量</param>
+				<param name="y">位置的y分量</param>
+				<param name="z">位置的z分量</param>
+				<returns>变换后的位置</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformPoint(UnityEngine.Vector3)">
+				<summary>
+					将位置从世界空间变换到本地空间。与 Transform.TransformPoint 相反。(受缩放影响)
+				</summary>
+				<param name="position">要变换的位置</param>
+				<returns>变换后的位置</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformVector(UnityEngine.Vector3)">
+				<summary>
+					将向量从世界空间变换到本地空间。与 Transform.TransformVector 相反。(受缩放影响)
+				</summary>
+				<param name="vector">要变换的向量</param>
+				<returns>变换到本地空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.InverseTransformVector(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的向量从世界空间变换到本地空间。与 Transform.TransformVector 相反。(受缩放影响)
+				</summary>
+				<param name="x">向量的x分量</param>
+				<param name="y">向量的y分量</param>
+				<param name="z">向量的z分量</param>
+				<returns>变换到本地空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.IsChildOf(UnityEngine.Transform)">
+				<summary>
+					该变换是否为指定变换的子项？
+				</summary>
+				<param name="parent">指定的变换</param>
+				<returns>如果该变换为其子项、深层子项（子项的子项）或与该变换相同，则返回 true，否则返回 false。</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.LookAt(UnityEngine.Transform,UnityEngine.Vector3)">
+				<summary>
+					旋转变换，使 forward 指向 target 的当前位置。
+				</summary>
+				<param name="target">要指向的目标</param>
+				<param name="worldUp">指定向上方向的矢量。</param>
+			</member>
+			<member name="M:UnityEngine.Transform.LookAt(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					旋转变换，使 forward 指向指定的世界空间中的位置。
+				</summary>
+				<param name="worldPosition">世界空间中的位置</param>
+				<param name="worldUp">指定向上方向的矢量。</param>
+			</member>
+			<member name="M:UnityEngine.Transform.LookAt(UnityEngine.Vector3)">
+				<summary>
+					旋转变换，使 forward 指向指定的世界空间中的位置。
+				</summary>
+				<param name="worldPosition">世界空间中的位置</param>
+			</member>
+			<member name="M:UnityEngine.Transform.LookAt(UnityEngine.Transform)">
+				<summary>
+					旋转变换，使 forward 指向 target 的当前位置。
+				</summary>
+				<param name="target">要指向的目标</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(System.Single,System.Single,System.Single)">
+				<summary>
+					围绕 Z 轴旋转 zAngle 度、围绕 X 轴旋转 xAngle 度、围绕 Y 轴旋转 yAngle 度（按此顺序）。
+				</summary>
+				<param name="xAngle">x轴旋转角度</param>
+				<param name="yAngle">y轴旋转角度</param>
+				<param name="zAngle">z轴旋转角度</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(UnityEngine.Vector3,UnityEngine.Space)">
+				<summary>
+					围绕 Z 轴旋转 eulers.z 度、围绕 X 轴旋转 eulers.x 度、围绕 Y 轴旋转 eulers.y 度（按此顺序）。
+				</summary>
+				<param name="eulers">旋转角度</param>
+				<param name="relativeTo">确定是以本地坐标轴旋转还是世界坐标轴旋转</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(UnityEngine.Vector3)">
+				<summary>
+					围绕 Z 轴旋转 eulers.z 度、围绕 X 轴旋转 eulers.x 度、围绕 Y 轴旋转 eulers.y 度（按此顺序）。
+				</summary>
+				<param name="eulers">旋转角度</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(System.Single,System.Single,System.Single,UnityEngine.Space)">
+				<summary>
+					围绕 Z 轴旋转 zAngle 度、围绕 X 轴旋转 xAngle 度、围绕 Y 轴旋转 yAngle 度（按此顺序）。
+				</summary>
+				<param name="xAngle">x轴旋转角度</param>
+				<param name="yAngle">y轴旋转角度</param>
+				<param name="zAngle">z轴旋转角度</param>
+				<param name="relativeTo">确定是以本地坐标轴旋转还是世界坐标轴旋转</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(UnityEngine.Vector3,System.Single,UnityEngine.Space)">
+				<summary>
+					围绕 axis 轴旋转 angle 度。
+				</summary>
+				<param name="axis">轴向</param>
+				<param name="angle">旋转角度</param>
+				<param name="relativeTo">确定轴是基于本地坐标轴旋转还是世界坐标轴旋转</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Rotate(UnityEngine.Vector3,System.Single)">
+				<summary>
+					围绕 axis 轴旋转 angle 度。
+				</summary>
+				<param name="axis">轴向</param>
+				<param name="angle">旋转角度</param>
+			</member>
+			<member name="M:UnityEngine.Transform.RotateAround(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+				<summary>
+					围绕point点，以axis为轴向，旋转angle角度。
+				</summary>
+				<param name="point">指定要围绕的点</param>
+				<param name="axis">旋转轴向，以世界坐标轴为基准</param>
+				<param name="angle">旋转角度</param>
+			</member>
+			<member name="M:UnityEngine.Transform.RotateAround(UnityEngine.Vector3,System.Single)">
+				<summary>
+					已弃用，请改用 Transform.Rotate
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.RotateAroundLocal(UnityEngine.Vector3,System.Single)">
+				<summary>
+					已弃用，请改用 Transform.Rotate
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.SetAsFirstSibling">
+				<summary>
+					将变换移动到同级变换列表的开头。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.SetAsLastSibling">
+				<summary>
+					将变换移动到同级变换列表的末尾。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Transform.SetParent(UnityEngine.Transform)">
+				<summary>
+					设置变换的父级。
+				</summary>
+				<param name="p">要使用的父变换。</param>
+			</member>
+			<member name="M:UnityEngine.Transform.SetParent(UnityEngine.Transform,System.Boolean)">
+				<summary>
+					设置变换的父级。
+				</summary>
+				<param name="parent">要使用的父变换。</param>
+				<param name="worldPositionStays">如果为 true，则修改相对于父级的位置、缩放和旋转，使对象保持与之前相同的世界空间位置、旋转和缩放。</param>
+			</member>
+			<member name="M:UnityEngine.Transform.SetPositionAndRotation(UnityEngine.Vector3,UnityEngine.Quaternion)">
+				<summary>
+					设置变换的世界空间位置和旋转。
+				</summary>
+				<param name="position">要设置的位置</param>
+				<param name="rotation">要设置的旋转</param>
+			</member>
+			<member name="M:UnityEngine.Transform.SetSiblingIndex(System.Int32)">
+				<summary>
+					设置同级变换列表索引。(这回改变变换在层级视图中的顺序)
+				</summary>
+				<param name="index">要设置的索引</param>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformDirection(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的向量从本地空间变换到世界空间。与 Transform.InverseTransformDirection 相反。(不受缩放和位置影响)
+				</summary>
+				<param name="x">向量的x分量</param>
+				<param name="y">向量的y分量</param>
+				<param name="z">向量的z分量</param>
+				<returns>变换到世界空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformDirection(UnityEngine.Vector3)">
+				<summary>
+					将向量从本地空间变换到世界空间。与 Transform.InverseTransformDirection 相反。(不受缩放和位置影响)
+				</summary>
+				<param name="direction">要变换的向量</param>
+				<returns>变换到世界空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformPoint(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的位置从本地空间变换到世界空间。与 Transform.InverseTransformPoint 相反。(受缩放影响)
+				</summary>
+				<param name="x">位置的x分量</param>
+				<param name="y">位置的y分量</param>
+				<param name="z">位置的z分量</param>
+				<returns>变换后的位置</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformPoint(UnityEngine.Vector3)">
+				<summary>
+					将位置从本地空间变换到世界空间。与 Transform.InverseTransformPoint 相反。(受缩放影响)
+				</summary>
+				<param name="position">要变换的位置</param>
+				<returns>变换后的位置</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformVector(System.Single,System.Single,System.Single)">
+				<summary>
+					将由x,y,z组成的向量从本地空间变换到世界空间。与 Transform.InverseTransformVector 相反。(受缩放影响)
+				</summary>
+				<param name="x">向量的x分量</param>
+				<param name="y">向量的y分量</param>
+				<param name="z">向量的z分量</param>
+				<returns>变换到世界空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.TransformVector(UnityEngine.Vector3)">
+				<summary>
+					将向量从本地空间变换到世界空间。与 Transform.InverseTransformVector 相反。(受缩放影响)
+				</summary>
+				<param name="vector">要变换的向量</param>
+				<returns>变换到世界空间后的向量</returns>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(System.Single,System.Single,System.Single)">
+				<summary>
+					将变换沿 X 轴移动 x、沿 Y 轴移动 y、沿 Z 轴移动 z。
+				</summary>
+				<param name="x">x轴移动距离</param>
+				<param name="y">y轴移动距离</param>
+				<param name="z">z轴移动距离</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(System.Single,System.Single,System.Single,UnityEngine.Space)">
+				<summary>
+					将变换沿 X 轴移动 x、沿 Y 轴移动 y、沿 Z 轴移动 z。
+				</summary>
+				<param name="x">x轴移动距离</param>
+				<param name="y">y轴移动距离</param>
+				<param name="z">z轴移动距离</param>
+				<param name="relativeTo">确定相对于本地坐标轴移动还是世界坐标轴移动</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(UnityEngine.Vector3)">
+				<summary>
+					根据指定的方向和距离移动变换。
+				</summary>
+				<param name="translation">要移动变换的向量</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(UnityEngine.Vector3,UnityEngine.Space)">
+				<summary>
+					根据指定的方向和距离移动变换。
+				</summary>
+				<param name="translation">要移动变换的向量</param>
+				<param name="relativeTo">确定相对于本地坐标轴移动还是世界坐标轴移动</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(System.Single,System.Single,System.Single,UnityEngine.Transform)">
+				<summary>
+					相对于 relativeTo 的本地坐标系，将变换沿 X 轴移动 x、沿 Y 轴移动 y、沿 Z 轴移动 z。如果 relativeTo 为 null，则相对于世界坐标系应用移动。
+				</summary>
+				<param name="x">x轴移动距离</param>
+				<param name="y">y轴移动距离</param>
+				<param name="z">z轴移动距离</param>
+				<param name="relativeTo">指定变换坐标系</param>
+			</member>
+			<member name="M:UnityEngine.Transform.Translate(UnityEngine.Vector3,UnityEngine.Transform)">
+				<summary>
+					相对于 relativeTo 的本地坐标系，根据指定的方向和距离移动变换。如果 relativeTo 为 null，则相对于世界坐标系应用移动。
+				</summary>
+				<param name="translation">要移动变换的向量</param>
+				<param name="relativeTo">指定变换坐标系</param>
+			</member>
+		</MF-UnityEngine.Transform>
+		<MF-UnityEngine.Debug>
+			<member name="T:UnityEngine.Debug">
+				<summary>
+					此类包含在开发游戏时可使调试变得更轻松的方法。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Debug.logger">
+				<summary>
+					已弃用，请改用 Debug.unityLogger
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Debug.developerConsoleVisible">
+				<summary>
+					开发人员控制台是否可见。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Debug.unityLogger">
+				<summary>
+					获取默认调试记录器。使用默认记录器将 message 记录到 Unity 控制台。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Debug.isDebugBuild">
+				<summary>
+					在 Build Settings 对话框中有一个名为“Development Build”的复选框。如果选中，则 isDebugBuild 将为 true。 在该 Editor 中，isDebugBuild 始终返回 true。 建议在部署游戏时取消对 Debug.Log 的所有调用，这样您可以 使用调试输出部署 Beta 版本，关闭调试输出部署最终版本。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,System.String,System.Object[])">
+				<summary>
+					已弃用，请改用 AssertFormat(bool, string, params object[])
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,System.String,UnityEngine.Object)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,System.Object,UnityEngine.Object)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,System.String)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,System.Object)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Assert(System.Boolean,UnityEngine.Object)">
+				<summary>
+					断言某个条件，并在失败时将错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.AssertFormat(System.Boolean,UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					断言某个条件，并在失败时将格式化的错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数。</param>
+			</member>
+			<member name="M:UnityEngine.Debug.AssertFormat(System.Boolean,System.String,System.Object[])">
+				<summary>
+					断言某个条件，并在失败时将格式化的错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="condition">您预计为 true 的条件</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Break">
+				<summary>
+					暂停该 Editor。当您想要检查该 Inspector 上的某些值并且您无法手动暂停它时， 这非常有用。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Debug.ClearDeveloperConsole">
+				<summary>
+					将错误从开发者控制台中清除。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Debug.DebugBreak">
+				<summary>
+					未知？？？？？
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+				<summary>
+					在指定的起始点与结束点之间绘制一条直线。
+				</summary>
+				<param name="start">应作为该直线起始点的世界空间中的点</param>
+				<param name="end">应作为该直线结束点的世界空间中的点</param>
+				<param name="color">该直线的颜色</param>
+				<param name="duration">第一次显示该直线后该直线可见的时间长短（单位为秒）。如果持续时间为零，则该直线仅显示一帧</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+				<summary>
+					在指定的起始点与结束点之间绘制一条直线。
+				</summary>
+				<param name="start">应作为该直线起始点的世界空间中的点</param>
+				<param name="end">应作为该直线结束点的世界空间中的点</param>
+				<param name="color">该直线的颜色</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					在指定的起始点与结束点之间绘制一条直线。
+				</summary>
+				<param name="start">应作为该直线起始点的世界空间中的点</param>
+				<param name="end">应作为该直线结束点的世界空间中的点</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+				<summary>
+					在指定的起始点与结束点之间绘制一条直线。
+				</summary>
+				<param name="start">应作为该直线起始点的世界空间中的点</param>
+				<param name="end">应作为该直线结束点的世界空间中的点</param>
+				<param name="color">该直线的颜色</param>
+				<param name="duration">第一次显示该直线后该直线可见的时间长短（单位为秒）。如果持续时间为零，则该直线仅显示一帧</param>
+				<param name="depthTest">该直线是否会被靠近相机的其他物体遮挡?</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+				<summary>
+					在世界坐标中绘制一条从 start 到 start + dir 的射线。
+				</summary>
+				<param name="start">应作为该射线起始点的世界空间中的点</param>
+				<param name="dir">该射线的方向和长度</param>
+				<param name="color">绘制的射线的颜色</param>
+				<param name="duration">第一次显示该射线后该射线可见的时间长短（单位为秒）。如果持续时间为零，则该直线仅显示一帧</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+				<summary>
+					在世界坐标中绘制一条从 start 到 start + dir 的射线。
+				</summary>
+				<param name="start">应作为该射线起始点的世界空间中的点</param>
+				<param name="dir">该射线的方向和长度</param>
+				<param name="color">绘制的射线的颜色</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+				<summary>
+					在世界坐标中绘制一条从 start 到 start + dir 的射线。
+				</summary>
+				<param name="start">应作为该射线起始点的世界空间中的点</param>
+				<param name="dir">该射线的方向和长度</param>
+				<param name="color">绘制的射线的颜色</param>
+				<param name="duration">第一次显示该射线后该射线可见的时间长短（单位为秒）。如果持续时间为零，则该直线仅显示一帧</param>
+				<param name="depthTest">该射线是否会被靠近相机的其他物体遮挡?</param>
+			</member>
+			<member name="M:UnityEngine.Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					在世界坐标中绘制一条从 start 到 start + dir 的射线。
+				</summary>
+				<param name="start">应作为该射线起始点的世界空间中的点</param>
+				<param name="dir">该射线的方向和长度</param>
+			</member>
+			<member name="M:UnityEngine.Debug.ExtractStackTraceNoAlloc(System.Byte*,System.Int32,System.String)">
+				<summary>
+					使用当前托管调用堆栈作为UTF-8字节序列填充非托管缓冲区，而不分配GC内存。返回写入缓冲区的字节数。
+				</summary>
+				<param name="buffer">目标缓冲区接收调用堆栈文本</param>
+				<param name="bufferMax">需要写入的最大字节数</param>
+				<param name="projectFolder">项目文件夹路径，以清除路径名称</param>
+				<returns>写入缓冲区的字节数。</returns>
+			</member>
+			<member name="M:UnityEngine.Debug.Log(System.Object,UnityEngine.Object)">
+				<summary>
+					将消息记录到 Unity 控制台。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.Log(System.Object)">
+				<summary>
+					将消息记录到 Unity 控制台。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogAssertion(System.Object,UnityEngine.Object)">
+				<summary>
+					将断言消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogAssertion(System.Object)">
+				<summary>
+					将断言消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogAssertionFormat(UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					将格式化断言消息记录到 Unity 控制台。
+				</summary>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogAssertionFormat(System.String,System.Object[])">
+				<summary>
+					将格式化断言消息记录到 Unity 控制台。
+				</summary>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogError(System.Object)">
+				<summary>
+					将错误消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogError(System.Object,UnityEngine.Object)">
+				<summary>
+					将错误消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogErrorFormat(System.String,System.Object[])">
+				<summary>
+					将格式化错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogErrorFormat(UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					将格式化错误消息记录到 Unity 控制台。
+				</summary>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogException(System.Exception)">
+				<summary>
+					将错误消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="exception">运行时异常</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogException(System.Exception,UnityEngine.Object)">
+				<summary>
+					将错误消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="exception">运行时异常</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogFormat(UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					将格式化消息记录到 Unity 控制台。
+				</summary>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogFormat(UnityEngine.LogType,UnityEngine.LogOption,UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					将格式化消息记录到 Unity 控制台。
+				</summary>
+				<param name="logType">消息的类型，如警告或错误等</param>
+				<param name="logOptions">日志消息特殊处理选项标志</param>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogFormat(System.String,System.Object[])">
+				<summary>
+					将格式化消息记录到 Unity 控制台。
+				</summary>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogWarning(System.Object,UnityEngine.Object)">
+				<summary>
+					将警告消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+				<param name="context">此消息应用到的对象</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogWarning(System.Object)">
+				<summary>
+					将警告消息记录到控制台的 Debug.Log 的变体。
+				</summary>
+				<param name="message">字符串或对象，将被转换为字符串表示进行显示</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogWarningFormat(UnityEngine.Object,System.String,System.Object[])">
+				<summary>
+					将格式化警告消息记录到 Unity 控制台。
+				</summary>
+				<param name="context">此消息应用到的对象</param>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+			<member name="M:UnityEngine.Debug.LogWarningFormat(System.String,System.Object[])">
+				<summary>
+					将格式化警告消息记录到 Unity 控制台。
+				</summary>
+				<param name="format">复合格式字符串</param>
+				<param name="args">格式参数</param>
+			</member>
+		</MF-UnityEngine.Debug>
+		<MF-UnityEngine.SceneManagement.SceneManager>
+			<member name="T:UnityEngine.SceneManagement.SceneManager">
+				<summary>
+					运行时的场景管理。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings">
+				<summary>
+					Build Settings 中的场景数量。
+				</summary>
+			</member>
+			<member name="P:UnityEngine.SceneManagement.SceneManager.sceneCount">
+				<summary>
+					当前加载的场景总数。
+				</summary>
+			</member>
+			<member name="E:UnityEngine.SceneManagement.SceneManager.activeSceneChanged">
+				<summary>
+					订阅此事件可在活动场景发生变化时收到通知。
+				</summary>
+			</member>
+			<member name="E:UnityEngine.SceneManagement.SceneManager.sceneLoaded">
+				<summary>
+					订阅此事件可在加载场景时收到通知。
+				</summary>
+			</member>
+			<member name="E:UnityEngine.SceneManagement.SceneManager.sceneUnloaded">
+				<summary>
+					订阅此事件可在卸载场景时收到通知。
+				</summary>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.CreateScene(System.String,UnityEngine.SceneManagement.CreateSceneParameters)">
+				<summary>
+					在运行时使用给定名称创建一个新的空场景。
+				</summary>
+				<param name="sceneName">新场景的名称。此参数不能为空或为 null，也不能与现有场景的名称相同</param>
+				<param name="parameters">用于创建场景的各种参数</param>
+				<returns>对所创建的新场景的引用，或返回无效场景（如果创建失败）</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.CreateScene(System.String)">
+				<summary>
+					在运行时使用给定名称创建一个新的空场景。
+				</summary>
+				<param name="sceneName">新场景的名称。此参数不能为空或为 null，也不能与现有场景的名称相同</param>
+				<returns>对所创建的新场景的引用，或返回无效场景（如果创建失败）</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetActiveScene">
+				<summary>
+					获取当前活动的场景。
+				</summary>
+				<returns>活动场景</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetAllScenes">
+				<summary>
+					已弃用，请通过 SceneManager.sceneCount 和 SceneManager.GetSceneAt(int index) 来遍历所有场景
+				</summary>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneAt(System.Int32)">
+				<summary>
+					获取 SceneManager 的已加载场景列表中索引处的场景。
+				</summary>
+				<param name="index">要获取的场景的索引。索引必须大于或等于 0 且小于 SceneManager.sceneCount</param>
+				<returns>对指定索引处场景的引用</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(System.Int32)">
+				<summary>
+					从构建索引中获取场景结构。如果将场景添加到 Build Settings 中的给定构建索引处，且场景已加载，则此方法将返回有效场景。如果场景未加载，SceneManager 将无法返回有效场景。
+				</summary>
+				<param name="buildIndex">构建 Build Settings 窗口中显示的索引</param>
+				<returns>如果有效，则返回对场景的引用；否则返回无效场景</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneByName(System.String)">
+				<summary>
+					搜索已加载的场景，查找包含给定名称的场景。
+				</summary>
+				<param name="name">要查找场景的名称</param>
+				<returns>如果有效，则返回对场景的引用；否则返回无效场景</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.GetSceneByPath(System.String)">
+				<summary>
+					搜索所有已加载的场景，查找具有给定资源路径的场景。
+				</summary>
+				<param name="scenePath">场景路径。应是项目文件夹的相对路径，例如：“Assets/MyScenes/MyScene.unity”</param>
+				<returns>如果有效，则返回对场景的引用；否则返回无效场景</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.String,UnityEngine.SceneManagement.LoadSceneMode)">
+				<summary>
+					按照 Build Settings 中的名称加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+				<param name="mode">允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 LoadSceneMode</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.String)">
+				<summary>
+					按照 Build Settings 中的名称加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.String,UnityEngine.SceneManagement.LoadSceneParameters)">
+				<summary>
+					按照 Build Settings 中的名称加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+				<param name="parameters">用于加载场景的各种参数</param>
+				<returns>正在加载的场景的引用</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.Int32,UnityEngine.SceneManagement.LoadSceneMode)">
+				<summary>
+					按照 Build Settings 中的索引加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+				<param name="mode">允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 LoadSceneMode</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.Int32)">
+				<summary>
+					按照 Build Settings 中的索引加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadScene(System.Int32,UnityEngine.SceneManagement.LoadSceneParameters)">
+				<summary>
+					按照 Build Settings 中的索引加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+				<param name="parameters">用于加载场景的各种参数</param>
+				<returns>正在加载的场景的引用</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.String,UnityEngine.SceneManagement.LoadSceneParameters)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+				<param name="parameters">用于加载场景的各种参数</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.Int32)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.String,UnityEngine.SceneManagement.LoadSceneMode)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+				<param name="mode">允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 LoadSceneMode</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.Int32,UnityEngine.SceneManagement.LoadSceneParameters)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+				<param name="parameters">用于加载场景的各种参数</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.Int32,UnityEngine.SceneManagement.LoadSceneMode)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中要加载场景的索引</param>
+				<param name="mode">允许您指定是否以累加方式加载场景。有关选项的更多信息，请参阅 LoadSceneMode</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(System.String)">
+				<summary>
+					在后台异步加载场景。
+				</summary>
+				<param name="sceneName">要加载的场景的名称或路径</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.MergeScenes(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.Scene)">
+				<summary>
+					这会将源场景合并到 destinationScene 中。此函数将源场景的内容合并到目标场景中， 并删除源场景。源场景根目录中的所有游戏对象 都将移动至目标场景的根目录。\ 注意：此函数具有破坏性：合并完成后， 将销毁源场景。
+				</summary>
+				<param name="sourceScene">将合并到目标场景中的场景。</param>
+				<param name="destinationScene">要合并源场景的现有场景。</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(UnityEngine.GameObject,UnityEngine.SceneManagement.Scene)">
+				<summary>
+					将游戏对象从当前场景移至新场景。
+				</summary>
+				<param name="go">要移动的游戏对象。</param>
+				<param name="scene">要移入游戏对象的场景。</param>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.Scene)">
+				<summary>
+					将场景设置为活动状态。活动场景是将用作新游戏对象（由脚本实例化）的目标的场景，在这些场景中会使用光照设置。以累加方式添加场景时（请参阅 LoadSceneMode.Additive），第一个场景将仍然保持为活动场景。使用此方法可将活动场景切换为您想作为目标的场景。
+				</summary>
+				<param name="scene">要进行设置的场景。</param>
+				<returns>如果场景尚未加载，则返回 false。</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadScene(System.Int32)">
+				<summary>
+					已弃用，请改用 SceneManager.UnloadSceneAsync
+				</summary>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadScene(System.String)">
+				<summary>
+					已弃用，请改用 SceneManager.UnloadSceneAsync
+				</summary>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadScene(UnityEngine.SceneManagement.Scene)">
+				<summary>
+					已弃用，请改用 SceneManager.UnloadSceneAsync
+				</summary>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(System.Int32)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中的场景索引</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(System.String)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="sceneName">要卸载的场景的名称或路径</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(UnityEngine.SceneManagement.Scene)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="scene">要卸载的场景</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(System.Int32,UnityEngine.SceneManagement.UnloadSceneOptions)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="sceneBuildIndex">Build Settings 中的场景索引</param>
+				<param name="options">场景卸载选项</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(System.String,UnityEngine.SceneManagement.UnloadSceneOptions)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="sceneName">要卸载的场景的名称或路径</param>
+				<param name="options">场景卸载选项</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+			<member name="M:UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.UnloadSceneOptions)">
+				<summary>
+					销毁所有与给定场景关联的游戏对象，并将场景从 SceneManager 中移除。
+				</summary>
+				<param name="scene">要卸载的场景</param>
+				<param name="options">场景卸载选项</param>
+				<returns>使用 AsyncOperation 确定操作是否已完成</returns>
+			</member>
+		</MF-UnityEngine.SceneManagement.SceneManager>
+		<MF-UnityEngine.Plane>
+			<member name="T:UnityEngine.Plane">
+				<summary>
+					表示3D空间中的一个平面
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Plane.#ctor(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					通过法线向量和坐标点定义一个平面
+				</summary>
+				<param name="inNormal">法线向量</param>
+				<param name="inPoint">坐标点</param>
+			</member>
+			<member name="M:UnityEngine.Plane.#ctor(UnityEngine.Vector3,System.Single)">
+				<summary>
+					通过法线向量和距离原点的距离定义一个平面
+				</summary>
+				<param name="inNormal">法线向量</param>
+				<param name="d">距离原点的距离</param>
+			</member>
+			<member name="M:UnityEngine.Plane.#ctor(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					通过三个坐标点定义一个平面
+				</summary>
+				<param name="a">坐标点a</param>
+				<param name="b">坐标点b</param>
+				<param name="c">坐标点c</param>
+			</member>
+			<member name="P:UnityEngine.Plane.normal">
+				<summary>
+					平面的法线向量
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Plane.distance">
+				<summary>
+					从平面到原点的距离，沿平面法线
+				</summary>
+			</member>
+			<member name="P:UnityEngine.Plane.flipped">
+				<summary>
+					返回一个相反的平面（镜面）
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Plane.Translate(UnityEngine.Plane,UnityEngine.Vector3)">
+				<summary>
+					返回指定平面移动后的平面
+				</summary>
+				<param name="plane">指定的平面</param>
+				<param name="translation">用于移动平面的空间偏移量。</param>
+				<returns></returns>
+			</member>
+			<member name="M:UnityEngine.Plane.ClosestPointOnPlane(UnityEngine.Vector3)">
+				<summary>
+					返回指定坐标点距离平面最近的坐标点
+				</summary>
+				<param name="point">指定的坐标点</param>
+				<returns>距离指定坐标点最近的新坐标点</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.Flip">
+				<summary>
+					将当前平面镜像反转
+				</summary>
+			</member>
+			<member name="M:UnityEngine.Plane.GetDistanceToPoint(UnityEngine.Vector3)">
+				<summary>
+					返回从平面到指定坐标点的有符号距离。
+				</summary>
+				<param name="point">指定坐标点</param>
+				<returns>从平面到坐标点的有符号距离</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.GetSide(UnityEngine.Vector3)">
+				<summary>
+					返回指定坐标点是否在当前平面的正方向
+				</summary>
+				<param name="point">指定坐标点</param>
+				<returns>正方向返回True,反方向返回False</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.Raycast(UnityEngine.Ray,System.Single@)">
+				<summary>
+					射线检测：检测射线与平面是否相交
+					相交：将enter设置为沿着射线起点到相交点的距离（正值）
+					不相交：将enter设置为射线起点到平面的距离的负值（负值或0）
+				</summary>
+				<param name="ray">指定的射线</param>
+				<param name="enter">射线到平面的距离</param>
+				<returns>射线与平面相交返回True,不相交返回 False</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.SameSide(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					两个坐标点是否在当前平面的同一侧
+				</summary>
+				<param name="inPt0">坐标点1</param>
+				<param name="inPt1">坐标点2</param>
+				<returns>如果两个坐标点在同一侧返回True,否则返回False</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.Set3Points(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					使用位于平面内的三个坐标点设置平面。当你看向平面的正方向时，这些点是顺时针旋转的。
+				</summary>
+				<param name="a">坐标点a</param>
+				<param name="b">坐标点b</param>
+				<param name="c">坐标点c</param>
+			</member>
+			<member name="M:UnityEngine.Plane.SetNormalAndPosition(UnityEngine.Vector3,UnityEngine.Vector3)">
+				<summary>
+					使用法线向量和坐标点设置平面
+				</summary>
+				<param name="inNormal">法线向量</param>
+				<param name="inPoint">坐标点</param>
+			</member>
+			<member name="M:UnityEngine.Plane.ToString">
+				<summary>
+					将当前平面对象转换为字符串形式输出
+				</summary>
+				<returns>字符串形式的平面对象</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.ToString(System.String)">
+				<summary>
+					使用指定的格式化字符串将当前平面对象转换为字符串形式输出
+				</summary>
+				<param name="format">格式化字符串</param>
+				<returns>字符串形式的平面对象</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.ToString(System.String,System.IFormatProvider)">
+				<summary>
+					使用指定的格式化字符串和区域设置格式信息将当前对象转换为字符串形式输出
+				</summary>
+				<param name="format">格式化字符串</param>
+				<param name="formatProvider">区域设置格式信息</param>
+				<returns>字符串形式的平面对象</returns>
+			</member>
+			<member name="M:UnityEngine.Plane.Translate(UnityEngine.Vector3)">
+				<summary>
+					移动平面
+				</summary>
+				<param name="translation">用于移动平面的空间偏移量</param>
+			</member>
+		</MF-UnityEngine.Plane>
+	</members>
+</doc>
